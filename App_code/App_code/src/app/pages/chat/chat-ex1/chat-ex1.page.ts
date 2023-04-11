@@ -1,0 +1,30 @@
+/*
+
+  Authors : initappz (Rahul Jograna)
+  Website : https://initappz.com/
+  Created : 17-March-2020
+  This App Template Source code is licensed as per the 
+  terms found in the Website https://initappz.com/license
+  Copyright and Good Faith Purchasers © 2020-present initappz.
+
+*/
+import { Component, OnInit } from '@angular/core';
+
+import { ChatDataService } from '../../../services/chats/chat-data.service';
+
+@Component({
+  selector: 'app-chat-ex1',
+  templateUrl: './chat-ex1.page.html',
+  styleUrls: ['./chat-ex1.page.scss'],
+})
+export class ChatEx1Page implements OnInit {
+
+  msgs = [];
+  constructor(private chat: ChatDataService) {
+    this.msgs = this.chat.messages;
+  }
+
+  ngOnInit() {
+  }
+
+}

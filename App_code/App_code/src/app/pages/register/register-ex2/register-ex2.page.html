@@ -1,0 +1,45 @@
+<!-- <ion-header>
+  <ion-toolbar color="secondary">
+    <ion-title>login-ex2</ion-title>
+  </ion-toolbar>
+</ion-header> -->
+
+<ion-content>
+  <div class="main_content_div" [class.ios_pad]="plt == 'ios'">
+    <ion-icon name="arrow-back-outline" (click)="goBack()"></ion-icon>
+    <div class="upper_div">
+      <img src="assets/imgs/car.png">
+    </div>
+    <div class="lower_div">
+
+      <ion-label class="head_lbl">Sign Up</ion-label>
+
+      <ion-item class="ion-no-padding">
+        <ion-label position="floating" class="light_lbl">First Name</ion-label>
+        <ion-input></ion-input>
+      </ion-item>
+
+      <ion-item class="ion-no-padding">
+        <ion-label position="floating" class="light_lbl">Last Name</ion-label>
+        <ion-input></ion-input>
+      </ion-item>
+
+      <ion-item class="ion-no-padding">
+        <ion-label position="floating" class="light_lbl">Email ID</ion-label>
+        <ion-input></ion-input>
+      </ion-item>
+
+      <ion-item class="ion-no-padding">
+        <ion-label position="floating" class="light_lbl">Password</ion-label>
+        <ion-input></ion-input>
+      </ion-item>
+
+      <ion-button expand="block" shape="round">
+        Sign Up
+      </ion-button>
+
+      <ion-label class="bottom_lbl">Already have an account ? <span class="signup_span">Login</span></ion-label>
+
+    </div>
+  </div>
+</ion-content>

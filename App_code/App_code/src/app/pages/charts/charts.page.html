@@ -1,0 +1,195 @@
+<ion-header>
+  <ion-toolbar color="secondary">
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>
+      Charts
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+
+<ion-content>
+
+  <ion-row>
+    <ion-col size="3">
+      <div class="center">
+        <div class="seperator"></div>
+      </div>
+    </ion-col>
+    <ion-col>
+      <p class="title">Line Chart</p>
+    </ion-col>
+    <ion-col size="3">
+      <div class="center">
+        <div class="seperator"></div>
+      </div>
+    </ion-col>
+  </ion-row>
+
+  <div class="row">
+    <div style="display: block;">
+      <canvas baseChart width="400" height="400" [datasets]="lineChartData" [labels]="lineChartLabels"
+        [options]="lineChartOptions" [colors]="lineChartColors" [legend]="lineChartLegend" [chartType]="lineChartType"
+        (chartHover)="chartHovered($event)" (chartClick)="chartClicked($event)"></canvas>
+    </div>
+    <ion-button (click)="randomize()" color="secondary" expand="block">
+      Change
+    </ion-button>
+  </div>
+
+  <ion-row>
+    <ion-col size="3">
+      <div class="center">
+        <div class="seperator"></div>
+      </div>
+    </ion-col>
+    <ion-col>
+      <p class="title">Doughnut Chart</p>
+    </ion-col>
+    <ion-col size="3">
+      <div class="center">
+        <div class="seperator"></div>
+      </div>
+    </ion-col>
+  </ion-row>
+
+  <div style="display: block">
+    <canvas baseChart [data]="doughnutChartData" [labels]="doughnutChartLabels" [chartType]="doughnutChartType">
+    </canvas>
+  </div>
+
+  <ion-row>
+    <ion-col size="3">
+      <div class="center">
+        <div class="seperator"></div>
+      </div>
+    </ion-col>
+    <ion-col>
+      <p class="title">Bar Chart</p>
+    </ion-col>
+    <ion-col size="3">
+      <div class="center">
+        <div class="seperator"></div>
+      </div>
+    </ion-col>
+  </ion-row>
+
+
+  <div style="display: block">
+    <canvas baseChart [datasets]="barChartData" [labels]="barChartLabels" [options]="barChartOptions"
+      [legend]="barChartLegend" [chartType]="barChartType">
+    </canvas>
+  </div>
+
+
+  <ion-row>
+    <ion-col size="3">
+      <div class="center">
+        <div class="seperator"></div>
+      </div>
+    </ion-col>
+    <ion-col>
+      <p class="title">Radar Chart</p>
+    </ion-col>
+    <ion-col size="3">
+      <div class="center">
+        <div class="seperator"></div>
+      </div>
+    </ion-col>
+  </ion-row>
+
+
+  <div style="display: block">
+    <canvas baseChart [datasets]="radarChartData" [options]="radarChartOptions" [labels]="radarChartLabels"
+      [chartType]="radarChartType">
+    </canvas>
+  </div>
+
+
+  <ion-row>
+    <ion-col size="3">
+      <div class="center">
+        <div class="seperator"></div>
+      </div>
+    </ion-col>
+    <ion-col>
+      <p class="title">Pie Chart</p>
+    </ion-col>
+    <ion-col size="3">
+      <div class="center">
+        <div class="seperator"></div>
+      </div>
+    </ion-col>
+  </ion-row>
+
+
+  <div class="chart">
+    <canvas baseChart [data]="pieChartData" [labels]="pieChartLabels" [chartType]="pieChartType"
+      [options]="pieChartOptions" [colors]="pieChartColors" [legend]="pieChartLegend">
+    </canvas>
+  </div>
+  <ion-row>
+    <ion-col size="6">
+      <ion-button (click)="pieChartLegend=!pieChartLegend" color="secondary" expand="block">
+        Toggle Legend
+      </ion-button>
+    </ion-col>
+    <ion-col size="6">
+      <ion-button (click)="changeLabels()" color="secondary" expand="block">
+        Change Labels
+      </ion-button>
+    </ion-col>
+  </ion-row>
+
+
+
+  <ion-row>
+    <ion-col size="3">
+      <div class="center">
+        <div class="seperator"></div>
+      </div>
+    </ion-col>
+    <ion-col>
+      <p class="title">PolarArea Chart</p>
+    </ion-col>
+    <ion-col size="3">
+      <div class="center">
+        <div class="seperator"></div>
+      </div>
+    </ion-col>
+  </ion-row>
+
+
+  <div style="display: block">
+    <canvas baseChart [data]="polarAreaChartData" [labels]="polarAreaChartLabels" [legend]="polarAreaLegend"
+      [chartType]="polarAreaChartType">
+    </canvas>
+  </div>
+
+
+  <ion-row>
+    <ion-col size="3">
+      <div class="center">
+        <div class="seperator"></div>
+      </div>
+    </ion-col>
+    <ion-col>
+      <p class="title">Bubble Chart</p>
+    </ion-col>
+    <ion-col size="3">
+      <div class="center">
+        <div class="seperator"></div>
+      </div>
+    </ion-col>
+  </ion-row>
+
+
+  <div style="display: block">
+    <canvas baseChart [datasets]="bubbleChartData" [options]="bubbleChartOptions" [colors]="bubbleChartColors"
+      [legend]="bubbleChartLegend" [chartType]="bubbleChartType">
+    </canvas>
+  </div>
+
+</ion-content>

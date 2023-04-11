@@ -1,0 +1,32 @@
+<ion-header>
+  <ion-toolbar color="dark">
+    <ion-buttons slot="end" (click)="drawCancel()">
+      <ion-icon name="close" color="danger"></ion-icon>
+    </ion-buttons>
+    <ion-title>Create Signature</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <signature-pad [options]="signaturePadOptions" id="signatureCanvas"></signature-pad>
+  <ion-grid>
+    <ion-row>
+      <ion-col size="4">
+        <ion-button expand="block" (click)="drawCancel()" color="danger">
+          Cancel
+        </ion-button>
+      </ion-col>
+      <ion-col size="4">
+        <ion-button expand="block" (click)="drawClear()">
+          Clear
+        </ion-button>
+      </ion-col>
+      <ion-col size="4">
+        <ion-button expand="block" (click)="drawComplete()" color="success">
+          Done
+        </ion-button>
+
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>

@@ -1,0 +1,37 @@
+<ion-header>
+  <ion-toolbar color="secondary">
+    <ion-buttons slot="start">
+      <ion-back-button mode="md"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Timeline 4</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="main_content_div">
+
+    <div class="main_div" *ngFor="let item of data">
+      <div class="time_div">
+        <ion-label class="time_lbl">{{item.s_time}}</ion-label>
+      </div>
+      <div class="card_div" [style.backgroundColor]="item.color">
+        <div class="upper_div">
+          <ion-label class="header">{{item.title}}</ion-label>
+          <ion-label class="small_lbl">{{item.cat}}</ion-label>
+          <ion-label class="small_lbl">{{item.s_time}} - {{item.e_time}}</ion-label>
+          <div class="back_image" [style.backgroundImage]="'url('+item.user+')'"></div>
+        </div>
+        <div class="lower_div">
+          <div>
+            <ion-label>DETAIL</ion-label>
+          </div>
+          <div>
+            <ion-icon slot="start" name="heart-outline"></ion-icon>
+            <ion-icon slot="start" name="trash"></ion-icon>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</ion-content>

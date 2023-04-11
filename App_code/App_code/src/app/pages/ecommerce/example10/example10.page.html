@@ -1,0 +1,36 @@
+<ion-header>
+  <ion-toolbar color="secondary">
+    <ion-buttons slot="start">
+      <ion-back-button mode="md"></ion-back-button>
+    </ion-buttons>
+    <ion-title>E-commerce Example 6</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="main_content_div">
+
+    <div class="left_div" *ngFor="let item of allProducts">
+      <div class="back_image" [style.backgroundImage]="'url(' + item.url + ')'"></div>
+      <div class="second_div">
+        <ion-label class="name">{{item.name}}</ion-label>
+        <ion-label class="prize">$ {{item.price}}</ion-label>
+      </div>
+      <div class="last_div">
+        <ion-button (click)="plus()" size="small" fill="clear">
+          <ion-icon slot="icon-only" name="add"></ion-icon>
+        </ion-button>
+
+        <!-- <ion-label><span>{{value}}</span></ion-label> -->
+
+        <div class="text_div">
+          <div class="lbl_div">{{value}}</div>
+        </div>
+
+        <ion-button (click)="minus()" size="small" fill="clear">
+          <ion-icon slot="icon-only" name="remove-outline"></ion-icon>
+        </ion-button>
+      </div>
+    </div>
+  </div>
+</ion-content>

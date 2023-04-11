@@ -1,0 +1,21 @@
+<ion-header>
+  <ion-toolbar color="secondary">
+    <ion-buttons slot="start">
+      <ion-back-button mode="md"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Grid Example 2</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="main_content_div">
+    <ion-grid fixed>
+      <ion-row>
+        <ion-col class="ion-no-padding" size="6" *ngFor="let item of dummyData">
+          <div class="back_image" [style.backgroundImage]="'url(' + item.url + ')'">
+          </div>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </div>
+</ion-content>

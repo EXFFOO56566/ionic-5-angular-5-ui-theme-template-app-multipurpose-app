@@ -1,0 +1,25 @@
+ 
+.div_img{
+    width: 250px;
+    height: 250px;
+    background-color: lightgray;
+    position: relative;
+    display: block;
+    margin: auto;
+    background-size: cover;
+    background-position: center;
+    .my_spin{
+        position: absolute;
+        left: 50%;
+        top:50%;
+        transform: translate(-50%,-50%);
+    }
+    .img_logo{      
+        width: 200px;
+        height: 200px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+    }
+}

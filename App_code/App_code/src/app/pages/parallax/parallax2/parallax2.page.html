@@ -1,0 +1,92 @@
+<ion-header>
+  <div class="shrinking-header" [shrinkingHeader]="scrollContent">
+    <ion-icon color="light" [class.ios_pad]="plt == 'ios'" name="arrow-back-outline" (click)="goBack()"></ion-icon>
+    <div class="bg-img" [ngStyle]="{'background-image': 'url(\'assets/imgs/image3.jpg\')'}"></div>
+    <div class="bg-layer"></div>
+    <div class="nav-layer"></div>
+    <div class="nav-img" [ngStyle]="{'background-image': 'url(\'assets/imgs/image4.jpg\')'}"></div>
+  </div>
+
+  <ion-toolbar color="secondary">
+    <ion-segment mode="ios" (ionChange)="segmentChanged($event)" [(ngModel)]="selectedSegment">
+      <ion-segment-button mode="ios" checked value="about">
+        <div class="segment-name">About</div>
+        <div class="divider" [ngClass]="{'selected': selectedSegment === 'about'}"></div>
+      </ion-segment-button>
+      <ion-segment-button mode="ios" value="top5spots">
+        <div class="segment-name">Top 5</div>
+        <div class="divider" [ngClass]="{'selected': selectedSegment === 'top5spots'}"></div>
+      </ion-segment-button>
+      <ion-segment-button mode="ios" value="partners">
+        <div class="segment-name">Partners</div>
+        <div class="divider" [ngClass]="{'selected': selectedSegment === 'partners'}"></div>
+      </ion-segment-button>
+    </ion-segment>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content fullscreen #scrollContent scrollEvents="true">
+  <div [ngSwitch]="selectedSegment">
+    <!-- About Tab -->
+    <div *ngSwitchCase="'about'" class="content-wrapper about-content">
+
+      <ion-label *ngFor="let iten of [1,2,3,4,5,6,7,8,9,10]">
+        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's
+        standard dummy
+        text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type
+        specimen book
+      </ion-label>
+
+    </div>
+
+    <!-- Top 5 Spots Tab -->
+    <div *ngSwitchCase="'top5spots'" class="content-wrapper spots-content">
+      <!-- Spots card list-->
+      <ion-card *ngFor="let fruits of basicAlertCard" (click)="showBasicAlert(fruits)">
+        <ion-img [src]="fruits.image"></ion-img>
+        <ion-card-content>
+          <ion-grid>
+            <ion-row>
+              <ion-col>
+                <ion-label class="title">{{fruits.name}}</ion-label>
+              </ion-col>
+            </ion-row>
+            <ion-row>
+              <ion-col>
+                <ion-label class="descriptions">{{fruits.descriptions}}</ion-label>
+              </ion-col>
+            </ion-row>
+          </ion-grid>
+        </ion-card-content>
+      </ion-card>
+    </div>
+
+    <!-- Partners Tab -->
+    <div *ngSwitchCase="'partners'" class="content-wrapper partners-content">
+      <ion-card *ngFor="let fruits of basicAlertCard" (click)="showBasicAlert(fruits)">
+        <ion-img [src]="fruits.image"></ion-img>
+        <ion-card-content>
+          <ion-grid>
+            <ion-row>
+              <ion-col>
+                <ion-label class="title">{{fruits.name}}</ion-label>
+              </ion-col>
+            </ion-row>
+            <ion-row>
+              <ion-col>
+                <ion-label class="descriptions">{{fruits.descriptions}}</ion-label>
+              </ion-col>
+            </ion-row>
+          </ion-grid>
+        </ion-card-content>
+      </ion-card>
+    </div>
+  </div>
+
+  <!-- FAB -->
+  <!-- <ion-fab class="start-tour-fab" #startTourFab (click)="openTourMapPage()">
+		<button ion-fab>
+			<div class="label">Start Tour</div>
+		</button>
+	</ion-fab> -->
+</ion-content>

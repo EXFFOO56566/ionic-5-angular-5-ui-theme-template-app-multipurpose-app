@@ -1,0 +1,19 @@
+.main_content_div{
+    width: 100%;
+
+    .back_image{
+        height: 150px;
+        width: 100%;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+    }
+    ion-label{
+        display: block;
+        text-align: center;
+        padding-left: 10px;
+        padding-right: 10px;
+        margin-top: 10px;
+        font-weight: 600;
+    }
+}

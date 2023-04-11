@@ -1,0 +1,79 @@
+<ion-header>
+  <ion-toolbar color="warning">
+    <ion-buttons slot="start">
+      <ion-menu-button color="light"></ion-menu-button>
+    </ion-buttons>
+    <ion-title color="light">Firebase Register</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <div class="login-logo">
+    <img src="assets/firebase/icon.png" class="logo_icon" alt="starter">
+    <p class="login-name">Register</p>
+    <p class="subTitle">Enter your login detail to <br>
+      access your account</p>
+  </div>
+
+  <form #loginForm="ngForm" novalidate>
+    <ion-list lines="none">
+      <ion-item lines="none">
+        <ion-input [(ngModel)]="login.full_name" type="text" placeholder="Full name" name="full_name"
+          #full_name="ngModel" spellcheck="false" autocapitalize="off" required>
+        </ion-input>
+      </ion-item>
+      <ion-text color="danger">
+        <p [hidden]="full_name.valid || submitted == false" class="ion-padding-start">
+          Name is required
+        </p>
+      </ion-text>
+      <ion-item lines="none">
+        <ion-input [(ngModel)]="login.email" type="email" placeholder="Email" name="email" #email="ngModel"
+          spellcheck="false" autocapitalize="off" required>
+        </ion-input>
+      </ion-item>
+      <ion-text color="danger">
+        <p [hidden]="email.valid || submitted == false" class="ion-padding-start">
+          Email is required
+        </p>
+      </ion-text>
+
+      <ion-item lines="none">
+        <ion-input [(ngModel)]="login.password" name="password" placeholder="password" type="password"
+          #password="ngModel" required>
+        </ion-input>
+      </ion-item>
+
+      <ion-text color="danger">
+        <p [hidden]="password.valid || submitted == false" class="ion-padding-start">
+          Password is required
+        </p>
+      </ion-text>
+      <ion-item lines="none">
+        <ion-input [(ngModel)]="login.confirmPassword" name="confirmPassword" placeholder="Confirm password"
+          type="password" #confirmPassword="ngModel" required>
+        </ion-input>
+      </ion-item>
+
+      <ion-text color="danger">
+        <p [hidden]="confirmPassword.valid || submitted == false" class="ion-padding-start">
+          Confirm Password is required
+        </p>
+      </ion-text>
+    </ion-list>
+
+    <ion-row class="ion-no-margin ion-no-padding">
+      <ion-col class="ion-no-margin ion-no-padding">
+        <ion-button color="warning" class="btn_class" (click)="onRegister(loginForm)" type="submit" expand="block"
+          [disabled]="isLogin">
+          <span class="title" *ngIf="!isLogin"> Register</span>
+          <ion-spinner name="circles" *ngIf="isLogin"></ion-spinner>
+        </ion-button>
+      </ion-col>
+    </ion-row>
+
+  </form>
+  <p class="createAcc" (click)="loginBack()">Already have an account?
+    <span class="registerTag">Login</span>
+  </p>
+</ion-content>

@@ -1,0 +1,24 @@
+<ion-header>
+  <ion-toolbar color="secondary">
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>Tooltip</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+
+  <span tooltip="<b>Bold text</b>">
+    Tooltip with HTML content
+  </span>
+
+  <br>
+  <!-- Html template -->
+  <ng-template #HtmlTemplate>
+    <b>Bold text</b>
+  </ng-template>
+
+  <button tooltip="Custom position" placement="bottom" [position]="{top: 150, left: 100}">Custom position</button>
+
+</ion-content>

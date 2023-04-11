@@ -1,0 +1,184 @@
+ion-content{
+    --background: whitesmoke;
+}
+.main_content_div{
+    width: 100%;
+    padding: 16px;
+
+    ul{
+        list-style-type: none;
+    }
+
+    li{
+        background: white;
+    }
+
+    .bar-stable {
+        background-color: #d9d9d9 !important;
+      }
+      .tabs{
+        background-color: #d9d9d9 !important;
+      }
+      .icon-size-lg {
+        font-size: 40px;
+      }
+      
+      .timeline-thumb ion-icon {
+          zoom: 1.2;
+          margin-top: .3em;
+      }
+      .timeline-stats ion-icon {
+          vertical-align: bottom;
+          font-size: 1.3em;
+      }
+      /*Timeline*/
+      
+      .pos-absolute-right {
+          position: absolute;
+          right: 8px;
+      }
+      
+      .timeline {
+          position: relative;
+          margin: 15px 0 0 0;
+      }
+      
+      .timeline:before {
+          content: '';
+          position: absolute;
+          top: 0;
+          bottom: 0;
+          width: 2px;
+          background: #afdcf8;
+          left: 44px;
+          margin-left: -29px;
+          z-index: 1;
+      }
+      
+      .timeline .timeline-thumb {
+          border-radius: 500px;
+          width: 12px;
+          z-index: 2;
+          position: absolute;
+          left: 10px
+      }
+      
+      .timeline .timeline-thumb.timeline-icon {
+          height: 12px;
+          text-align: center;
+          color: white;
+      }
+      
+      .timeline .timeline-thumb.timeline-icon i {
+          font-size: 28px;
+          margin: 6px 0;
+          display: block;
+      }
+      
+      .timeline .timeline-item {
+          padding-bottom: 8px;
+          padding: 15px;
+          margin-bottom: 15px;
+      }
+      
+      .timeline .timeline-stats {
+          position: relative;
+          font-size: 12px;
+          color: #7F8C8D;
+      }
+      
+      
+      .divider-title {
+          background: #e4e4e4;
+          padding: 5px 15px;
+          margin-top: 15px;
+      }
+      
+      /* === Color Themes === */
+      .text-muted {
+          color: #6d6d72 !important;
+      }
+      
+      .color-gray {
+          color: #8e8e93 !important;
+      }
+      
+      .color-red {
+          color: #ff3b30 !important;
+      }
+      
+      .bg-color-red {
+          background-color: #ff3b30 !important;
+      }
+      
+      .color-white {
+          color: #ffffff !important;
+      }
+      
+      .color-yellow {
+          color: #ffcc00 !important;
+      }
+      
+      .bg-color-yellow {
+          background-color: #ffcc00 !important;
+      }
+      
+      .color-green {
+          color: #4cd964 !important;
+      }
+      
+      .color-orange {
+          color: #ff9500 !important;
+      }
+      
+      .bg-color-orange {
+          background-color: #ff9500 !important;
+      }
+      
+      .color-blue {
+          color: #007aff !important;
+      }
+      
+      .bg-color-blue {
+          background-color: #007aff !important;
+      }
+      
+      .color-lightblue {
+          color: #5ac8fa !important;
+      }
+      
+      .bg-color-lightblue {
+          background-color: #5ac8fa !important;
+      }
+      
+      .color-bluegray {
+          color: #607d8b !important;
+      }
+      
+      .bg-color-bluegray {
+          background-color: #607d8b !important;
+      }
+      
+      .color-night {
+          color: #2B1B17 !important;
+      }
+      
+      .color-black {
+          color: black !important;
+      }
+      
+      .bg-color-white {
+          background-color: #ffffff;
+      }
+      
+      .bg-color-green {
+          background-color: #4cd964 !important;
+      }
+      h5 {
+        font-size: 14px;
+        margin: 0;
+      }
+      p{
+          font-size: 14px;
+      }
+}

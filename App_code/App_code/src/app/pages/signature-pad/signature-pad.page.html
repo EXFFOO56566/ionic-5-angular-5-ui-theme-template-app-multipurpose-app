@@ -1,0 +1,17 @@
+<ion-header>
+  <ion-toolbar color="secondary">
+    <ion-buttons slot="start">
+      <ion-menu-button mode="md"></ion-menu-button>
+    </ion-buttons>
+    <ion-title>Signature</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <div class="sign_block">
+    <img *ngIf="signature !=''" [src]="signature" class="sign">
+  </div>
+  <ion-button (click)="open()" expand="block" color="secondary">
+    Create Signature
+  </ion-button>
+</ion-content>

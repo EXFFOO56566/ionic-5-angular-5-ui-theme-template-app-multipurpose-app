@@ -1,0 +1,32 @@
+<ion-header [translucent]="true">
+
+  <ion-toolbar color="secondary">
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>Home</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="main_content_div">
+    <ion-slides mode="ios" pager="ios">
+      <ion-slide *ngFor="let item of lists" (click)="openUrl()" >
+        <div class="sback_image" [style.backgroundImage]="'url('+ item.img +')'"></div>
+      </ion-slide>
+    </ion-slides>
+
+    <div class="content_div">
+      <ion-grid fixed>
+        <ion-row>
+          <ion-col size="4" *ngFor="let item of dummyData">
+            <div class="inner_div" routerDirection="root" [routerLink]="[item.url]">
+              <ion-icon name="{{item.icon}}"></ion-icon>
+              <ion-label>{{item.title}}</ion-label>
+            </div>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+    </div>
+  </div>
+</ion-content>

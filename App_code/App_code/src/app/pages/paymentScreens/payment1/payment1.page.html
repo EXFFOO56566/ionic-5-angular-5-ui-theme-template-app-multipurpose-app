@@ -1,0 +1,62 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button mode="md"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Payment 1</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="main_content_div">
+    <ion-label class="header_lbl">Shipping</ion-label>
+
+    <div class="div_form">
+
+      <ion-item class="ion-no-padding">
+        <ion-label position="floating">Email</ion-label>
+        <ion-input></ion-input>
+      </ion-item>
+
+      <ion-item class="ion-no-padding">
+        <ion-label position="floating">Address</ion-label>
+        <ion-input></ion-input>
+      </ion-item>
+
+      <ion-row>
+        <ion-col size="6">
+          <ion-select placeholder="Select One">
+            <ion-select-option value="stripe">Stripe</ion-select-option>
+            <ion-select-option value="cod">Cash on Delivery</ion-select-option>
+            <ion-select-option value="paypal">Paypal</ion-select-option>
+          </ion-select>
+        </ion-col>
+        <ion-col size="6">
+          <ion-input class="botton_line" placeholder="cvv"></ion-input>
+        </ion-col>
+      </ion-row>
+
+      <ion-item class="ion-no-padding">
+        <ion-label position="floating">Country</ion-label>
+        <ion-input></ion-input>
+      </ion-item>
+
+      <ion-item class="ion-no-padding">
+        <ion-select placeholder="Select One">
+          <ion-select-option value="stripe">Stripe</ion-select-option>
+          <ion-select-option value="cod">Cash on Delivery</ion-select-option>
+          <ion-select-option value="paypal">Paypal</ion-select-option>
+        </ion-select>
+      </ion-item>
+    </div>
+
+    <div class="btn_div">
+      <ion-button (click)="goToPaymentNext()" expand="block" shape="round">
+        Continue to Payment
+      </ion-button>
+    </div>
+
+
+
+  </div>
+</ion-content>

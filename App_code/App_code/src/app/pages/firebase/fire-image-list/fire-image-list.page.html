@@ -1,0 +1,41 @@
+<ion-header>
+  <ion-toolbar color="secondary">
+    <ion-buttons slot="start" color="light">
+      <ion-back-button defaultHref="home" color="light" mode="md"></ion-back-button>
+    </ion-buttons>
+    <ion-title>
+      Firebase Image List
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <div class="div_logo" (click)="addNew()">
+    <img src="assets/images/add.png" class="img ">
+    <p class="new_title">Add New</p>
+  </div>
+
+  <img *ngIf="!haveData" src="assets/images/nodata.png">
+
+  <ion-card *ngFor="let list of lists;let i = index">
+    <ion-card-header>
+      <ion-card-subtitle>
+        <span class="text-primary">{{ i + 1 }}. </span>
+        <span class="list-source-name" [innerHTML]="gettimeago(list.timestamp)"></span>
+        <div class="list-more">
+          <ion-button fill="clear" (click)="launchMenu(list)" size="small" style="margin: 0px;">
+            <ion-icon slot="icon-only" name="ellipsis-vertical" style="font-size: 20px;"></ion-icon>
+          </ion-button>
+        </div>
+      </ion-card-subtitle>
+      <ion-card-title>{{list.title}}</ion-card-title>
+    </ion-card-header>
+    <ion-img class="animated fadeIn fast" *ngIf="list.image" [src]="list.image">
+    </ion-img>
+    <ion-card-content>
+      <p>
+        {{ list.description}}
+      </p>
+    </ion-card-content>
+  </ion-card>
+</ion-content>

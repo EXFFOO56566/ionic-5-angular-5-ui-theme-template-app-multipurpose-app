@@ -1,0 +1,33 @@
+<ion-header>
+  <ion-toolbar color="secondary">
+    <ion-buttons slot="start">
+      <ion-back-button mode="md"></ion-back-button>
+    </ion-buttons>
+    <ion-title>
+      Form with Images
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content class="ion-padding">
+
+  <rating [(ngModel)]="rate" readOnly="false" max="5" emptyStarIconName="star-outline" halfStarIconName="star-half"
+    starIconName="star" nullable="false" (ngModelChange)="onRatingChange($event)"></rating>
+
+  <ion-list lines="none" class="contactFormList">
+
+    <ion-item class="inputs-item" lines="none">
+      <ion-input type="text" placeholder="Name"></ion-input>
+    </ion-item>
+
+    <ion-item class="inputs-item" lines="none">
+      <ion-textarea placeholder="Message" rows="6"></ion-textarea>
+    </ion-item>
+
+    <ion-item *ngIf="cap_img">
+      <img [src]="cap_img" class="img_selected" />
+    </ion-item>
+  </ion-list>
+
+  <ion-button expand="block" fill="outline" color="secondary" (click)="getImages()">Add Images</ion-button>
+  <ion-button expand="block" color="secondary" (click)="sendMessage()">Send Messages</ion-button>
+</ion-content>

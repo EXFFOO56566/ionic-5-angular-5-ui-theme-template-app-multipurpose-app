@@ -1,0 +1,88 @@
+ion-content{
+    --background: whitesmoke;
+}
+.main_content_div{
+    width: 100%;
+    padding: 16px;
+
+    ion-label {
+        display: block;
+    }
+
+    .card_div{
+        background : white;
+        // padding: 15px;
+        margin-bottom: 15px;
+        box-shadow: 0px 3px 6px rgba(0,0,0,0.3);
+
+        .flex_div{
+            display: flex;
+            width: 100%;
+            align-items: center;
+            padding: 15px;
+            .back_image{
+                width: 50px;
+                height: 50px;
+                border-radius: 50%;
+                background-repeat: no-repeat;
+                background-position: center;
+                background-size: cover;
+            }
+            .user_div{
+                padding-left: 10px;
+
+                .username{
+                    font-weight: 600;
+                }
+                .location{
+                    color: gray;
+                    font-size: 14px;
+                }
+            }
+        }
+
+        .content_div{
+            padding-top: 0px;
+            font-size: 14px;
+            border-bottom: 1px solid lightgray;
+
+            ion-label {
+                margin-left: 15px;
+                margin-right: 15px;
+                padding-bottom: 20px;
+            }
+
+            .back_img{
+                height: 200px;
+                width: 100%;
+                background-repeat: no-repeat;
+                background-position: center;
+                background-size: cover;
+            }
+        }
+
+        .bottom_div{
+            padding: 15px;
+            display: flex;
+            align-self: center;
+            position: relative;
+
+            ion-label{
+                margin-left: 5px;
+                margin-right: 10px;
+                font-size: 14px;
+            }
+
+            ion-icon{
+                color: lightgray;
+                font-size: 20px;
+            }
+            .time{
+                position: absolute;
+                right: 15px;
+                font-size: 14px;
+                color: gray;
+            }
+        }
+    }
+}

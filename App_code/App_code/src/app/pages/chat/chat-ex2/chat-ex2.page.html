@@ -1,0 +1,64 @@
+<ion-header>
+  <!-- <ion-toolbar color="secondary">
+    <ion-buttons slot="start">
+      <ion-back-button text="" mode="md"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Chat Example 2</ion-title>
+  </ion-toolbar> -->
+
+  <div class="header_div">
+    <div>
+      <ion-buttons slot="start">
+        <ion-back-button mode="md" color="light"></ion-back-button>
+      </ion-buttons>
+    </div>
+    <div>
+      <ion-label class="username">Jonh Doe</ion-label>
+    </div>
+    <div>
+      <ion-button fill="clear" size="small">
+        <ion-icon slot="icon-only" name="call"></ion-icon>
+      </ion-button>
+      <ion-button fill="clear" size="small">
+        <ion-icon slot="icon-only" name="videocam"></ion-icon>
+      </ion-button>
+    </div>
+  </div>
+</ion-header>
+
+<ion-content>
+  <div class="main_content_div">
+
+    <span *ngFor="let item of msgs">
+      <div class="left_div" *ngIf="item.side == 'left'">
+        <div class="inner_div">
+          <div class="back_image" [style.backgroundImage]="'url(assets/imgs/user1.jpg)'"></div>
+          <div class="msg_div">
+            <ion-label>{{item.msg}}</ion-label>
+            <div class="tri_left"></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="right_div" *ngIf="item.side == 'right'">
+        <div class="inner_div">
+          <div class="msg_div">
+            <ion-label>{{item.msg}}</ion-label>
+            <div class="tri_right"></div>
+          </div>
+          <div class="back_image" [style.backgroundImage]="'url(assets/imgs/user2.jpg)'"></div>
+        </div>
+      </div>
+    </span>
+
+  </div>
+</ion-content>
+
+<ion-footer>
+  <div class="footer_div">
+    <ion-input type="text" placeholder="Type Here.."></ion-input>
+    <div class="chat_div">
+      <ion-icon name="navigate"></ion-icon>
+    </div>
+  </div>
+</ion-footer>

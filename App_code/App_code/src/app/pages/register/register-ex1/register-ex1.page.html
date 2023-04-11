@@ -1,0 +1,32 @@
+<!-- <ion-header>
+  <ion-toolbar color="secondary">
+    <ion-title>login-ex1</ion-title>
+  </ion-toolbar>
+</ion-header> -->
+
+<ion-content>
+  <div class="main_content_div" [class.ios_pad]="plt == 'ios'">
+
+    <ion-icon name="arrow-back-outline" (click)="goBack()"></ion-icon>
+
+    <ion-label class="main_head">Sign Up</ion-label>
+    <div class="form_div">
+
+      <div class="tri"></div>
+
+      <ion-label>First Name</ion-label>
+      <ion-input type="text" placeholder="First Name"></ion-input>
+      <ion-label>Last Name</ion-label>
+      <ion-input type="text" placeholder="Last Name"></ion-input>
+      <ion-label>Email</ion-label>
+      <ion-input type="text" placeholder="Email ID"></ion-input>
+      <ion-label>Password</ion-label>
+      <ion-input type="text" placeholder="Password"></ion-input>
+      <ion-button expand="block">
+        Sign Up
+      </ion-button>
+
+      <ion-label class="lbl">Already have an account ? <span class="signup_span">Login</span></ion-label>
+    </div>
+  </div>
+</ion-content>

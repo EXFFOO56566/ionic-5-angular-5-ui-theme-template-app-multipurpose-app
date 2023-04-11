@@ -1,0 +1,43 @@
+<!-- <ion-header>
+  <ion-toolbar color="secondary">
+    <ion-title>profile-ex3</ion-title>
+  </ion-toolbar>
+</ion-header> -->
+
+<ion-content>
+  <div class="main_content_div" [class.ios_pad]="plt == 'ios'">
+    <ion-icon name="arrow-back-outline" class="back_btn" (click)="goBack()"></ion-icon>
+
+    <div class="main_round">
+      <div class="user_image" [style.backgroundImage]="'url(assets/imgs/user2.jpg)'"></div>
+      <div class="white_div">
+        <ion-icon name="pencil-sharp"></ion-icon>
+      </div>
+    </div>
+
+    <div class="content_div">
+      <ion-label class="username">John Doe</ion-label>
+      <ion-label class="small_lbl">
+        <ion-icon slot="start" name="location-outline"></ion-icon> Paris, France
+      </ion-label>
+
+      <ion-label class="head_lbl">About</ion-label>
+      <ion-label class="about_lbl">
+        Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+        Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.
+      </ion-label>
+
+      <ion-label class="head_lbl">Posts</ion-label>
+
+      <ion-grid fixed class="ion-no-padding">
+        <ion-row>
+          <ion-col class="ion-no-padding" size="4" *ngFor="let item of posts">
+            <div class="back_image" [style.backgroundImage]="'url(' + item.url + ')'"></div>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+
+
+    </div>
+  </div>
+</ion-content>

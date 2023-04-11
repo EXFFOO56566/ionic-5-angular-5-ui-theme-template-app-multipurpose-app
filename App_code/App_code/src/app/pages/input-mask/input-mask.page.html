@@ -1,0 +1,29 @@
+<ion-header>
+  <ion-toolbar color="secondary">
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>Input Mask</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <input type="text" [specialCharacters]="[ '[' ,']' , '\\' ]" mask="[00]\[000]" />
+  <br>
+  <input type="text" prefix="+7" mask="(000) 000 00 00" />
+  <br>
+  <input type="text" suffix="$" mask="0000" />
+  <br>
+  <input type="text" [dropSpecialCharacters]="false" mask="000-000.00" />
+  <br>
+  <input mask="(000) 000-0000" prefix="+7" [showMaskTyped]="true" />
+  <br>
+  <input mask="(000) 000-0000" prefix="+7" [showMaskTyped]="true" placeHolderCharacter="*" />
+  <br>
+  <input type="text" mask="separator.2" />
+  <br>
+  <input type="text" mask="00 00" [validation]="true" />
+  <br>
+  <input placeholder="Secure input" [hiddenInput]="true" mask="XXX/X0/0000" />
+
+</ion-content>

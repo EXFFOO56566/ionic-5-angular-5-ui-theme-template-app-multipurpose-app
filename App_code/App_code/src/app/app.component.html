@@ -1,0 +1,216 @@
+<ion-app>
+
+  <ion-split-pane contentId="main-content">
+    <ion-menu contentId="main-content" type="overlay">
+      <ion-content>
+        <ion-list id="inbox-list">
+          <ion-list-header>Ionic5 Starter</ion-list-header>
+          <ion-note>contactatracp@gmail.com</ion-note>
+
+          <ion-menu-toggle auto-hide="false" *ngFor="let p of appPages; let i = index">
+            <ion-item (click)="selectedIndex = i" routerDirection="root" [routerLink]="[p.url]" lines="none"
+              detail="false" [class.selected]="selectedIndex == i">
+              <ion-icon slot="start" [ios]="p.icon" [md]="p.icon"></ion-icon>
+              <ion-label>{{ p.title }}</ion-label>
+            </ion-item>
+          </ion-menu-toggle>
+        </ion-list>
+      </ion-content>
+    </ion-menu>
+
+    <ion-menu side="end" menuId="menu1" contentId="main-content" id="first">
+      <ion-content>
+        <div class="header_1" [class.ios_pad]="plt == 'ios'">
+          <ion-label>Welcome,</ion-label>
+          <ion-label class="name">Jonh Doe</ion-label>
+
+          <div class="back_img" [style.backgroundImage]="'url(assets/imgs/user2.jpg)'" [class.back_img_ios]="plt == 'ios'"></div>
+        </div>
+
+        <ion-menu-toggle>
+          <ion-list>
+            <ion-item lines="none" (click)="goToMenu1(1)" routerLink="/sidemenu-home" detail="false">
+              <ion-icon name="home"></ion-icon>
+              <ion-label class="lbl">Home</ion-label>
+            </ion-item>
+
+            <ion-item lines="none" (click)="goToMenu1(2)" routerLink="/sidemenu-home" detail="false">
+              <ion-icon name="basket"></ion-icon>
+              <ion-label>My Cart</ion-label>
+            </ion-item>
+
+            <ion-item lines="none" (click)="goToMenu1(3)" routerLink="/sidemenu-home" detail="false">
+              <ion-icon name="chatbubbles"></ion-icon>
+              <ion-label>Chat</ion-label>
+            </ion-item>
+
+            <ion-item lines="none" (click)="goToMenu1(4)" routerLink="/sidemenu-home" detail="false">
+              <ion-icon name="navigate"></ion-icon>
+              <ion-label>Address</ion-label>
+            </ion-item>
+
+            <ion-item lines="none" (click)="goToMenu1(5)" routerLink="/sidemenu-home" detail="false">
+              <ion-icon name="arrow-redo-circle"></ion-icon>
+              <ion-label>Share</ion-label>
+            </ion-item>
+          </ion-list>
+
+        </ion-menu-toggle>
+      </ion-content>
+    </ion-menu>
+
+    <ion-menu side="end" menuId="menu2" contentId="main-content" id="second">
+      <ion-content>
+        <div class="header_2" [class.ios_pad]="plt == 'ios'">
+          <div class="back_img" [style.backgroundImage]="'url(assets/imgs/user2.jpg)'"></div>
+          <div class="second_div">
+            <ion-label class="name">Jonh Doe</ion-label>
+            <ion-label class="small">Developer</ion-label>
+          </div>
+        </div>
+
+        <ion-menu-toggle>
+          <ion-grid fixed>
+            <ion-row>
+              <ion-col size="5.5">
+                <ion-icon name="home"></ion-icon>
+                <ion-label class="lbl">Home</ion-label>
+              </ion-col>
+              <ion-col size="5.5">
+                <ion-icon name="basket"></ion-icon>
+                <ion-label>My Cart</ion-label>
+              </ion-col>
+              <ion-col size="5.5">
+                <ion-icon name="chatbubbles"></ion-icon>
+                <ion-label>Chat</ion-label>
+              </ion-col>
+              <ion-col size="5.5">
+                <ion-icon name="navigate"></ion-icon>
+                <ion-label>Address</ion-label>
+              </ion-col>
+              <ion-col size="5.5">
+                <ion-icon name="arrow-redo-circle"></ion-icon>
+                <ion-label>Share</ion-label>
+              </ion-col>
+              <ion-col size="5.5">
+                <ion-icon name="arrow-redo-circle"></ion-icon>
+                <ion-label>Logout</ion-label>
+              </ion-col>
+            </ion-row>
+          </ion-grid>
+        </ion-menu-toggle>
+      </ion-content>
+    </ion-menu>
+
+    <ion-menu side="end" menuId="menu3" contentId="main-content" id="third">
+      <ion-content>
+        <ion-menu-toggle>
+          <div class="flex_div">
+
+            <div class="inner_div">
+              <ion-icon name="home"></ion-icon>
+            </div>
+
+            <div class="inner_div">
+              <ion-icon name="basket"></ion-icon>
+            </div>
+
+            <div class="inner_div">
+              <ion-icon name="chatbubbles"></ion-icon>
+            </div>
+
+            <div class="inner_div">
+              <ion-icon name="navigate"></ion-icon>
+            </div>
+
+            <div class="inner_div">
+              <ion-icon name="arrow-redo-circle"></ion-icon>
+            </div>
+
+            <div class="inner_div">
+              <ion-icon name="power-outline"></ion-icon>
+            </div>
+          </div>
+        </ion-menu-toggle>
+      </ion-content>
+    </ion-menu>
+
+    <ion-menu side="end" menuId="menu4" contentId="main-content" id="fourth" [class.menu_height]="plt == 'ios'">
+      <ion-content [class.ios_padd]="plt == 'ios'">
+        <ion-menu-toggle>
+          <ion-grid fixed>
+            <ion-row>
+              <ion-col size="5.5">
+                <ion-icon name="home"></ion-icon>
+                <ion-label class="lbl">Home</ion-label>
+              </ion-col>
+              <ion-col size="5.5">
+                <ion-icon name="basket"></ion-icon>
+                <ion-label>My Cart</ion-label>
+              </ion-col>
+              <ion-col size="5.5">
+                <ion-icon name="chatbubbles"></ion-icon>
+                <ion-label>Chat</ion-label>
+              </ion-col>
+              <ion-col size="5.5">
+                <ion-icon name="navigate"></ion-icon>
+                <ion-label>Address</ion-label>
+              </ion-col>
+              <ion-col size="5.5">
+                <ion-icon name="arrow-redo-circle"></ion-icon>
+                <ion-label>Share</ion-label>
+              </ion-col>
+              <ion-col size="5.5">
+                <ion-icon name="arrow-redo-circle"></ion-icon>
+                <ion-label>Logout</ion-label>
+              </ion-col>
+            </ion-row>
+          </ion-grid>
+        </ion-menu-toggle>
+      </ion-content>
+    </ion-menu>
+
+    <ion-menu side="end" menuId="menu5" contentId="main-content" id="fifth">
+      <ion-content>
+        <ion-list no-padding class="list-padd" no-margin>
+          <ion-list-header>
+            <ion-label>Skills</ion-label>
+          </ion-list-header>
+          <div *ngFor="let p of pages">
+            <div *ngIf="p.subPages && !p.module">
+              <ion-item detail (click)="expandMenu(p.title)">
+                <ion-icon slot="start" [name]="p.icon"></ion-icon>
+                <ion-label>
+                  {{ p.title }}
+                </ion-label>
+              </ion-item>
+              <div *ngIf="showSubMenu == p.title">
+                <ion-menu-toggle class="ion-menu-toggle" auto-hide="false" *ngFor="let option of p.subPages">
+                  <ion-item padding-start>
+                    <ion-icon slot="start" [name]="option.icon"></ion-icon>
+                    <ion-label class="menu-label">
+                      {{ option.title }}
+                    </ion-label>
+                  </ion-item>
+                </ion-menu-toggle>
+              </div>
+            </div>
+            <div *ngIf="!p.subPages">
+              <div auto-hide="false">
+                <ion-item>
+                  <ion-icon slot="start" [name]="p.icon"></ion-icon>
+                  <ion-label>
+                    {{ p.title }}
+                  </ion-label>
+                </ion-item>
+              </div>
+            </div>
+          </div>
+        </ion-list>
+      </ion-content>
+    </ion-menu>
+
+    <ion-router-outlet id="main-content"></ion-router-outlet>
+  </ion-split-pane>
+
+</ion-app>

@@ -1,0 +1,51 @@
+<ion-header>
+  <ion-toolbar color="secondary">
+    <ion-buttons slot="start">
+      <ion-back-button mode="md"></ion-back-button>
+    </ion-buttons>
+    <ion-title>E-commerce Example 2</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="main_content_div">
+    <img src="assets/imgs/products/bag.jpg">
+
+    <ion-label class="name">Brown Lady Handbag <span>$200.00</span></ion-label>
+    <ion-label class="desc">Small bag for travelling</ion-label>
+
+    <div class="main_div">
+      <div class="flex_div">
+        <div class="round_div red" (click)="onClick(1)">
+          <ion-icon name="checkmark" *ngIf="id == 1"></ion-icon>
+        </div>
+        <div class="round_div green" (click)="onClick(2)">
+          <ion-icon name="checkmark" *ngIf="id == 2"></ion-icon>
+        </div>
+        <div class="round_div blue" (click)="onClick(3)">
+          <ion-icon name="checkmark" *ngIf="id == 3"></ion-icon>
+        </div>
+        <div class="round_div orange" (click)="onClick(4)">
+          <ion-icon name="checkmark" *ngIf="id == 4"></ion-icon>
+        </div>
+      </div>
+      <div>
+        <ion-icon class="heart_icn" name="heart"></ion-icon>
+      </div>
+    </div>
+
+    <div class="desc_card">
+      <ion-label class="small_header">Description</ion-label>
+      <ion-label class="pro_desc">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum
+        has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type
+        and scrambled</ion-label>
+    </div>
+
+
+
+    <ion-button expand="block">
+      ADD TO CART
+    </ion-button>
+
+  </div>
+</ion-content>

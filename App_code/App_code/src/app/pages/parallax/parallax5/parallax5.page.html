@@ -1,0 +1,41 @@
+<hidenav-stretchheader header-height="50" opacity-factor="7" opacity-color="black" init-expanded="false">
+  <div #static>
+    <ion-toolbar color="white" style="font-size: 46px">
+      <ion-icon color="light" name="arrow-back-outline" style="font-size: 30px;margin-left: 16px;" (click)="goBack()"></ion-icon>
+    </ion-toolbar>
+
+  </div>
+  <div #static #title style="width: 100%;" (click)="expand()">
+    <label style="left: 60px; top: 20px; position: relative; color: white; font-size: 20px; font-weight: bold;">Moving
+      Title</label>
+  </div>
+  <div #shrinkexpand style="background: white; color: gold; height: 250px" (click)="expand()">
+    <img src="assets/avatars/1.jpg" width="100%" alt="">
+  </div>
+</hidenav-stretchheader>
+
+<ion-content hidenav-sh-content>
+  <ion-card>
+    <img src="assets/avatars/4.jpg">
+    <ion-card-header class="hydrated">
+      <ion-card-subtitle role="heading" aria-level="3" class="hydrated">Destination</ion-card-subtitle>
+      <ion-card-title role="heading" aria-level="2" class="hydrated">Madison, WI</ion-card-title>
+    </ion-card-header>
+    <ion-card-content class="card-content card-content-ios hydrated">
+      Founded in 1829 on an isthmus between Lake Monona and Lake Mendota, Madison was named the capital of the Wisconsin
+      Territory in 1836.
+    </ion-card-content>
+  </ion-card>
+  <ion-card>
+    <img src="assets/avatars/5.jpg">
+    <ion-card-header class="hydrated">
+      <ion-card-subtitle role="heading" aria-level="3" class="hydrated">Destination</ion-card-subtitle>
+      <ion-card-title role="heading" aria-level="2" class="hydrated">Madison, WI</ion-card-title>
+    </ion-card-header>
+    <ion-card-content class="card-content card-content-ios hydrated">
+      Founded in 1829 on an isthmus between Lake Monona and Lake Mendota, Madison was named the capital of the Wisconsin
+      Territory in 1836.
+    </ion-card-content>
+  </ion-card>
+
+</ion-content>

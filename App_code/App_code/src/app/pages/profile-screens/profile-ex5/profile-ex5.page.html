@@ -1,0 +1,68 @@
+<!-- <ion-header>
+  <ion-toolbar color="secondary">
+    <ion-title>profile-ex5</ion-title>
+  </ion-toolbar>
+</ion-header> -->
+
+<ion-content>
+  <div class="main_content_div">
+
+    <div class="waveWrapper waveAnimation">
+      <ion-icon name="arrow-back-outline" class="back_btn" [class.ios_pad]="plt == 'ios'" (click)="goBack()"></ion-icon>
+      <div class="waveWrapperInner bgTop">
+        <div class="wave waveTop" style="background-image: url('assets/imgs/wave-mid.png')"></div>
+      </div>
+      <div class="waveWrapperInner bgMiddle">
+        <div class="wave waveMiddle" style="background-image: url('assets/imgs/wave-mid.png')"></div>
+      </div>
+      <div class="waveWrapperInner bgBottom">
+        <div class="wave waveBottom" style="background-image: url('assets/imgs/wave-mid.png')"></div>
+      </div>
+    </div>
+
+    <div class="up_div">
+      <div class="user_image" [style.backgroundImage]="'url(assets/imgs/user2.jpg)'"></div>
+      <ion-label class="username">Jonh Doe</ion-label>
+      <ion-label class="small_lbl">Web Designer</ion-label>
+    </div>
+
+    <div class="lower_div">
+      <div class="card_div">
+        <div>
+          <ion-label>Web Design</ion-label>
+          <ion-label class="prize">$700.00</ion-label>
+        </div>
+        <div>
+          <circle-progress [percent]="60" [radius]="25" [outerStrokeWidth]="4" [outerStrokeColor]="'#78C000'"
+            [animation]="true" [animationDuration]="500" [clockwise]=true [showTitle]=true [showUnits]=true
+            [showSubtitle]=false [showInnerStroke]=false toFixed=0></circle-progress>
+        </div>
+      </div>
+
+      <div class="card_div">
+        <div>
+          <ion-label>App Design</ion-label>
+          <ion-label class="prize">$2000.00</ion-label>
+        </div>
+        <div>
+          <circle-progress [percent]="90" [radius]="25" [outerStrokeWidth]="4" [outerStrokeColor]="'#78C000'"
+            [animation]="true" [animationDuration]="500" [clockwise]=true [showTitle]=true [showUnits]=true
+            [showSubtitle]=false [showInnerStroke]=false toFixed=0></circle-progress>
+        </div>
+      </div>
+
+      <div class="card_div">
+        <div>
+          <ion-label>Programming</ion-label>
+          <ion-label class="prize">$900.00</ion-label>
+        </div>
+        <div>
+          <circle-progress [percent]="80" [radius]="25" [outerStrokeWidth]="4" [outerStrokeColor]="'#78C000'"
+            [animation]="true" [animationDuration]="500" [clockwise]=true [showTitle]=true [showUnits]=true
+            [showSubtitle]=false [showInnerStroke]=false toFixed=0></circle-progress>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</ion-content>

@@ -1,0 +1,32 @@
+<!-- <ion-header>
+  <ion-toolbar color="secondary">
+    <ion-title>login-ex6</ion-title>
+  </ion-toolbar>
+</ion-header> -->
+
+<ion-content>
+  <div class="main_content_div">
+    <video autoplay muted loop id="myVideo">
+      <source src="assets/imgs/login-bg.mp4" type="video/mp4">
+      Your browser does not support HTML5 video.
+    </video>
+
+    <div class="content">
+    <ion-icon name="arrow-back-outline" (click)="goBack()" [class.ios_pad]="plt == 'ios'"></ion-icon>
+
+      <div class="form_div">
+        <ion-label class="head_lbl">Login</ion-label>
+        <ion-label class="small_lbl">Username</ion-label>
+        <ion-input type="text" placeholder="Username"></ion-input>
+        <ion-label class="small_lbl">Password</ion-label>
+        <ion-input type="text" placeholder="Password"></ion-input>
+
+        <ion-label class="forgot">Forgot Password</ion-label>
+
+        <ion-button expand="block" fill="outline">
+          Login
+        </ion-button>
+      </div>
+    </div>
+  </div>
+</ion-content>

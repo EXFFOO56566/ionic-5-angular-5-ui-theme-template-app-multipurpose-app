@@ -1,0 +1,50 @@
+<!-- <ion-header>
+  <ion-toolbar color="secondary">
+    <ion-title>login-ex4</ion-title>
+  </ion-toolbar>
+</ion-header> -->
+
+<ion-content>
+  <div class="main_content_div" [class.ios_pad]="plt == 'ios'">
+    
+    <ion-icon name="arrow-back-outline" (click)="goBack()"></ion-icon>
+
+    <div class="upper_div">
+      <div class="yellow_div" [class.yellow_div_ios]="plt == 'ios'"></div>
+    </div>
+
+    <div class="lower_div">
+      <ion-label class="head_lbl">Sign Up</ion-label>
+
+      <ion-row>
+        <ion-col>
+          <ion-slides [options]="avatarSlide">
+            <ion-slide *ngFor="let avatar of avatars">
+              <img class="pick-avatar" src="assets/avatars/{{ avatar.img}}"
+                [ngClass]="{'pick-avatar-seleccionado': avatar.seleccionado}" (click)="seleccionarAvatar( avatar )" />
+            </ion-slide>
+          </ion-slides>
+        </ion-col>
+      </ion-row>
+
+      <!-- <ion-label class="small_lbl">First Name</ion-label> -->
+      <ion-input type="text" placeholder="First Name"></ion-input>
+      <!-- <ion-label class="small_lbl">Last Name</ion-label> -->
+      <ion-input type="text" placeholder="Last Name"></ion-input>
+      <!-- <ion-label class="small_lbl">Email ID</ion-label> -->
+      <ion-input type="text" placeholder="Email ID"></ion-input>
+      <!-- <ion-label class="small_lbl">Password</ion-label> -->
+      <ion-input type="text" placeholder="Password"></ion-input>
+
+
+
+      <ion-button expand="block">
+        Sign Up
+      </ion-button>
+
+      <ion-label class="bottom_lbl">Already have an Account ? <span class="signup_span">Login</span></ion-label>
+
+    </div>
+
+  </div>
+</ion-content>

@@ -1,0 +1,87 @@
+ @mixin ribbonize ($ribbon-color, $text-color: white, $border-width: 3px) {
+    span {
+      color: $text-color;
+      background: $ribbon-color;
+      &::before {
+        border-left: $border-width solid $ribbon-color;
+        border-top: $border-width solid $ribbon-color;
+      }
+      &::after {
+        border-right: $border-width solid $ribbon-color;
+        border-top: $border-width solid $ribbon-color;
+      }
+    }
+  }
+
+  $default: #f53d3d;
+  $cruzeiro: #387ef5;
+  $atletico: darken(#f4f4f4, 45%);
+  $javascript: #f7e023;
+
+  .item-ribbon{
+    background-color: #fff;
+    position: relative;
+    filter: none;
+    opacity: 1;
+    .ribbon {
+      position: absolute;
+      right: -5px;
+      top: -5px;
+      z-index: 2;
+      overflow: hidden;
+      width: 60px;
+      height: 60px;
+      text-align: right;
+      span {
+        font-size: 10px;
+        font-weight: bold;
+        color: #fff;
+        text-transform: uppercase;
+        text-align: center;
+        line-height: 13px;
+        transform: rotate(45deg);
+        -webkit-transform: rotate(45deg);
+        width: 79px;
+        display: block;
+        background: #f53d3d;
+        position: absolute;
+        top: 18px;
+        right: -15px;
+        &::before {
+          content: "";
+          position: absolute;
+          left: 0;
+          top: 100%;
+          z-index: -1;
+          border-left: 3px solid $default;
+          border-right: 3px solid transparent;
+          border-bottom: 3px solid transparent;
+          border-top: 3px solid $default;
+        }
+        &::after {
+          content: "";
+          position: absolute;
+          right: 0;
+          top: 100%;
+          z-index: -1;
+          border-left: 3px solid transparent;
+          border-right: 3px solid $default;
+          border-bottom: 3px solid transparent;
+          border-top: 3px solid $default;
+        }
+      }
+    }
+  }
+
+  .ribbon.cruzeiro {
+    @include ribbonize($cruzeiro);
+  }
+
+  .ribbon.atletico {
+    @include ribbonize($atletico);
+  }
+
+  .ribbon.javascript {
+    @include ribbonize($javascript, black);
+  }
+  

@@ -1,0 +1,85 @@
+// .main_content_div{
+//     width: 100%;
+//     height: 100vh;
+
+//     ion-slides{
+//         height: 100vh;
+//     }
+//     .swiper-wrapper{
+//         transform: none !important;
+//     }
+
+//     .slide_1{
+//         background-image: linear-gradient(#73D25C, #29b507);
+//         height: 100vh !important;
+
+//         img{
+//             width: 150px;
+//             display: block;
+//             margin: auto;
+//         }
+//     }
+// }
+
+.main_content_div{
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    // background: white;
+
+    ion-icon{
+        font-size: 30px;
+        color: white;
+        position: absolute;
+        top: 16px;
+        z-index: 999;
+        left: 16px;
+    }
+
+    ion-slides{
+        --bullet-background : #E0E0E0;
+        --bullet-background-active : var(--ion-color-main);
+    }
+
+    .slide_1{
+        background-image: linear-gradient(#73D25C,#29b507);
+    }
+    .slide_2{
+        background-image: linear-gradient(#3AAAFE,#008ADF);
+    }
+
+    .slide_3{
+        background-image: linear-gradient(#F8CD18,#cca502);
+    }
+    
+
+    
+    .slide_div{
+       width: 100%;
+       height: 100vh;
+       display: flex;
+       flex-direction: column;
+       justify-content: center;
+       align-items: center;
+
+       .slide_img{
+            width: 150px;
+            height: 150px;
+        }
+        .head_lbl{
+            font-size: 26px;
+            display: block;
+            text-align: center;
+            font-weight: bold;
+            margin-top: 30px;
+            color: white;
+        }
+        .small_lbl{
+            display: block;
+            text-align: center;
+            margin-top: 30px;
+            color: white;
+        }
+    }
+}
+    

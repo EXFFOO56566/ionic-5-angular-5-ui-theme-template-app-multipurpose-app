@@ -1,0 +1,23 @@
+<ion-header>
+  <ion-toolbar color="secondary">
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>Video Player</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-spinner class="ion-text-center" name="circles" *ngIf="!haveLoaded"></ion-spinner>
+  <video src="" poster="" playsinline="1" class="video_tag" #videoPl controlsList="nodownload"></video>
+
+  <div class="content_div">
+    <ion-label>
+      Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's 
+      standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make 
+      a type specimen book.
+    </ion-label>
+  </div>
+
+  
+</ion-content>

@@ -1,0 +1,70 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-back-button mode="md"></ion-back-button>
+    </ion-buttons>
+    <ion-title>payment2</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="main_content_div">
+    <ion-label class="header_lbl">Enter Payment Detail</ion-label>
+
+    <ion-list lines="none">
+      <ion-radio-group mode="md" (ionChange)="checkedChange($event)">
+        
+        <ion-item class="ion-no-padding">
+          <ion-label>Stripe</ion-label>
+          <ion-radio slot="start" value="stripe"></ion-radio>
+        </ion-item>
+
+        <div class="form_div" *ngIf="value == 'stripe'">
+          <ion-input type="text" placeholder="XXXX-XXXX-XXXX-4242"></ion-input>
+          <ion-input type="text" placeholder="Card Holder Name"></ion-input>
+          <ion-row>
+            <ion-col size="6">
+                <ion-datetime display-format="YYYY" placeholder="YYYY"></ion-datetime>
+            </ion-col>
+            <ion-col size="6">
+              <ion-input type="text" placeholder="cvv"></ion-input>
+            </ion-col>
+          </ion-row>
+    
+          <ion-button expand="block">
+            Confirm & Pay
+          </ion-button>
+        </div>
+    
+        <ion-item class="ion-no-padding">
+          <ion-label>Paypal</ion-label>
+          <ion-radio slot="start" value="paypal"></ion-radio>
+        </ion-item>
+
+        <div class="form_div" *ngIf="value == 'paypal'">
+          <ion-input type="text" placeholder="Paypal ID"></ion-input>
+    
+          <ion-button expand="block">
+            Confirm & Pay
+          </ion-button>
+        </div>
+
+        <ion-item class="ion-no-padding">
+          <ion-label>Cash on Delivery</ion-label>
+          <ion-radio slot="start" value="cod"></ion-radio>
+        </ion-item>
+
+        <div class="form_div" *ngIf="value == 'cod'">
+    
+          <ion-button expand="block">
+            Confirm
+          </ion-button>
+        </div>
+
+
+
+      </ion-radio-group>
+    </ion-list>
+
+  </div>
+</ion-content>

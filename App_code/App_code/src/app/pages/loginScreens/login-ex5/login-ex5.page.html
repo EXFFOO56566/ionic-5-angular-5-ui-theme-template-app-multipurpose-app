@@ -1,0 +1,43 @@
+<!-- <ion-header>
+  <ion-toolbar color="secondary">
+    <ion-title>login-ex5</ion-title>
+  </ion-toolbar>
+</ion-header> -->
+
+<ion-content>
+
+  <div class="overlay">
+
+  <ion-icon name="arrow-back-outline" (click)="goBack()" [class.ios_pad]="plt == 'ios'"></ion-icon>
+
+
+    <div class="form_div">
+      <ion-label class="head_lbl">Login</ion-label>
+      <ion-label class="small_lbl">Username</ion-label>
+      <ion-input type="text" placeholder="Username"></ion-input>
+      <ion-label class="small_lbl">Password</ion-label>
+      <ion-input type="text" placeholder="Password"></ion-input>
+
+      <ion-label class="forgot">Forgot Password</ion-label>
+
+      <ion-button expand="block" fill="outline">
+        Login
+      </ion-button>
+    </div>
+  </div>
+
+  <ion-slides [options]="slideOpts">
+    <ion-slide>
+      <div class="back_image" [style.backgroundImage]="'url(assets/imgs/slide1.jpg)'"></div>
+    </ion-slide>
+    <ion-slide>
+      <div class="back_image" [style.backgroundImage]="'url(assets/imgs/slide2.jpg)'"></div>
+    </ion-slide>
+    <ion-slide>
+      <div class="back_image" [style.backgroundImage]="'url(assets/imgs/slide3.jpg)'"></div>
+    </ion-slide>
+  </ion-slides>
+  <div class="main_content_div">
+
+  </div>
+</ion-content>

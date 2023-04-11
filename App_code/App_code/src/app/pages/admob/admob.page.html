@@ -1,0 +1,32 @@
+<ion-header>
+  <ion-toolbar color="secondary">
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>Admob</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <ion-list lines="none">
+    <ion-item>
+      <ion-label class="ion-text-center">Resources</ion-label>
+    </ion-item>
+
+    <ion-button (click)="showBanner()" expand="block" id="g1">
+      Show Banner Ads
+    </ion-button>
+
+    <ion-button (click)="showInter()" expand="block" id="g2">
+      Show Interstitial Ads
+    </ion-button>
+
+    <ion-button (click)="showVideo()" expand="block" id="g3">
+      Show Video Reward Ads
+    </ion-button>
+
+
+
+  </ion-list>
+
+</ion-content>

@@ -1,0 +1,30 @@
+<ion-header>
+  <ion-toolbar color="secondary">
+    <ion-buttons slot="start">
+      <ion-back-button mode="md"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Parallax Example 1</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [scrollEvents]="true" parallaxHeader="assets/imgs/image4.jpg" [parallaxHeight]="300">
+  <div class="main-content">
+    <ion-card *ngFor="let fruits of basicAlertCard" (click)="showBasicAlert(fruits)">
+      <ion-img [src]="fruits.image"></ion-img>
+      <ion-card-content>
+        <ion-grid>
+          <ion-row>
+            <ion-col>
+              <ion-label class="title">{{fruits.name}}</ion-label>
+            </ion-col>
+          </ion-row>
+          <ion-row>
+            <ion-col>
+              <p class="descriptions">{{fruits.descriptions}}</p>
+            </ion-col>
+          </ion-row>
+        </ion-grid>
+      </ion-card-content>
+    </ion-card>
+  </div>
+</ion-content>

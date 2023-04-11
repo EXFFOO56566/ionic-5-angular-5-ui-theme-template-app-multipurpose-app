@@ -1,0 +1,98 @@
+<ion-header>
+  <ion-toolbar color="secondary">
+    <ion-buttons slot="start" color="light">
+      <ion-back-button mode="md"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Profile Example 2</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="main_content_div">
+
+    <div class="upper_div">
+      <div class="user_image" [style.backgroundImage]="'url(assets/imgs/user2.jpg)'"></div>
+      <div class="detail_div">
+        <ion-label class="header_lbl">Work Status</ion-label>
+        <ion-label>
+          <ion-icon slot="start" name="location-outline"></ion-icon> Paris, France
+        </ion-label>
+        <ion-label>At Bank</ion-label>
+        <ion-label>Contract Signing</ion-label>
+
+        <div class="line_div"></div>
+
+        <div class="tab_div">
+          <div>
+            <ion-label class="bold_lbl">230</ion-label>
+            <ion-label>Contacts</ion-label>
+          </div>
+          <div>
+            <ion-label class="bold_lbl">150</ion-label>
+            <ion-label>Meetings</ion-label>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="name_div">
+      <ion-label class="username">Jonh Doe</ion-label>
+      <ion-label class="gray_lbl">Junior Manager</ion-label>
+    </div>
+
+    <div class="line_div"></div>
+
+    <div class="last_div">
+      <ion-label class="header_lbl">Technologies</ion-label>
+      <ion-grid>
+        <ion-row>
+          <ion-col size="4">Angular</ion-col>
+          <ion-col size="8">
+            <ion-progress-bar value="0.5" mode="md"></ion-progress-bar>
+          </ion-col>
+        </ion-row>
+
+        <ion-row>
+          <ion-col size="4">Java</ion-col>
+          <ion-col size="8">
+            <ion-progress-bar value="0.5" mode="md"></ion-progress-bar>
+          </ion-col>
+        </ion-row>
+
+        <ion-row>
+          <ion-col size="4">PHP</ion-col>
+          <ion-col size="8">
+            <ion-progress-bar value="0.5" mode="md"></ion-progress-bar>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+    </div>
+
+    <div class="last_div">
+      <ion-label class="header_lbl">Technical Skills</ion-label>
+      <ion-grid>
+        <ion-row>
+          <ion-col size="4">Mac OS</ion-col>
+          <ion-col size="8">
+            <ion-progress-bar value="0.5" mode="md"></ion-progress-bar>
+          </ion-col>
+        </ion-row>
+
+        <ion-row>
+          <ion-col size="4">Windows OS</ion-col>
+          <ion-col size="8">
+            <ion-progress-bar value="0.5" mode="md"></ion-progress-bar>
+          </ion-col>
+        </ion-row>
+
+        <ion-row>
+          <ion-col size="4">Linux OS</ion-col>
+          <ion-col size="8">
+            <ion-progress-bar value="0.5" mode="md"></ion-progress-bar>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+    </div>
+
+  </div>
+</ion-content>

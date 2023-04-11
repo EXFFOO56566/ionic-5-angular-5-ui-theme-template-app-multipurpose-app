@@ -1,0 +1,35 @@
+<!-- <ion-header>
+  <ion-toolbar color="secondary">
+    <ion-title>login-ex4</ion-title>
+  </ion-toolbar>
+</ion-header> -->
+
+<ion-content>
+  <div class="main_content_div" [class.ios_pad]="plt == 'ios'">
+
+    <ion-icon name="arrow-back-outline" (click)="goBack()"></ion-icon>
+
+    <div class="upper_div">
+      <div class="yellow_div" [class.yellow_div_ios]="plt == 'ios'"></div>
+    </div>
+
+    <div class="lower_div">
+      <ion-label class="head_lbl">Login</ion-label>
+
+      <ion-label class="small_lbl">Username</ion-label>
+      <ion-input type="text" placeholder="Username"></ion-input>
+      <ion-label class="small_lbl">Password</ion-label>
+      <ion-input type="text" placeholder="Password"></ion-input>
+
+      <ion-label class="forgot">Forgot Password ?</ion-label>
+
+      <ion-button expand="block">
+        Login
+      </ion-button>
+
+      <ion-label class="bottom_lbl">Don't have Account ? <span class="signup_span">Sign Up</span></ion-label>
+
+    </div>
+
+  </div>
+</ion-content>

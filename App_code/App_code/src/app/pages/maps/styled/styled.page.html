@@ -1,0 +1,16 @@
+<ion-header>
+  <ion-toolbar color="secondary">
+    <ion-buttons slot="start">
+      <ion-back-button mode="md"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Styled</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div #map id="map"></div>
+  <ion-range min="10" max="50" [(ngModel)]="radius" (ionChange)="changeMap()">
+    <ion-label class="ion-text-right">{{radius}} KM</ion-label>
+  </ion-range>
+
+</ion-content>

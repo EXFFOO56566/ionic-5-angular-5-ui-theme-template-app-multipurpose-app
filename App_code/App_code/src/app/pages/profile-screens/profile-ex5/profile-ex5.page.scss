@@ -1,0 +1,143 @@
+.main_content_div{
+    @keyframes move_wave {
+        0% {
+            transform: translateX(0) translateZ(0) scaleY(1)
+        }
+        50% {
+            transform: translateX(-25%) translateZ(0) scaleY(0.55)
+        }
+        100% {
+            transform: translateX(-50%) translateZ(0) scaleY(1)
+        }
+    }
+
+    .back_btn{
+        color: white;
+        position: absolute;
+        z-index: 99999;
+        left: 16px;
+        top: 16px;
+        font-size: 25px;
+    }
+    .waveWrapper {
+        overflow: hidden;
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        top: 0;
+        height: 360px;
+        position : relative;
+    }
+    .waveWrapperInner {
+        position: absolute;
+        width: 100%;
+        overflow: hidden;
+        height: 100%;
+        bottom: -1px;
+        background-image: linear-gradient(to top, #86377b 20%, #27273c 80%);
+    }
+    .bgTop {
+        z-index: 15;
+        opacity: 0.5;
+    }
+    .bgMiddle {
+        z-index: 10;
+        opacity: 0.75;
+    }
+    .bgBottom {
+        z-index: 5;
+    }
+    .wave {
+        position: absolute;
+        left: 0;
+        width: 200%;
+        height: 100%;
+        background-repeat: repeat no-repeat;
+        background-position: 0 bottom;
+        transform-origin: center bottom;
+    }
+    .waveTop {
+        background-size: 50% 100px;
+    }
+    .waveAnimation .waveTop {
+      animation: move-wave 3s;
+       -webkit-animation: move-wave 3s;
+       -webkit-animation-delay: 1s;
+       animation-delay: 1s;
+    }
+    .waveMiddle {
+        background-size: 50% 120px;
+    }
+    .waveAnimation .waveMiddle {
+        animation: move_wave 10s linear infinite;
+    }
+    .waveBottom {
+        background-size: 50% 100px;
+    }
+    .waveAnimation .waveBottom {
+        animation: move_wave 15s linear infinite;
+    }
+
+    
+
+    .up_div{
+        position: absolute;
+        left: 50%;
+        top: 20%;
+        transform: translate(-50%,-50%);
+        z-index: 999;
+
+        .user_image{
+            width: 90px;
+            height: 90px;
+            border-radius: 50%;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+        ion-label {
+            display: block;
+        }
+        .username{
+            text-align: center;
+            color: white;
+            font-weight: 600;
+            font-size: 20px;
+            margin-top: 10px;
+        }
+        .small_lbl{
+            text-align: center;
+            color: white;
+            margin-top: 5px;
+        }
+    }
+
+    .lower_div{
+        padding: 20px;
+
+        .card_div{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            padding: 15px;
+            height: 80px;
+            align-items: center;
+            border-radius: 15px;
+            box-shadow: 0px 6px 15px rgba(0,0,0,0.3);
+            margin-bottom: 20px;
+            ion-label {
+                display: block;
+            }
+            .prize{
+                font-weight: 600;
+            }
+
+           
+        }
+    }
+}
+
+svg{
+    height: 100px;
+}

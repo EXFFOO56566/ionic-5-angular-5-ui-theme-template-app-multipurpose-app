@@ -1,0 +1,40 @@
+ion-toolbar{
+    --background: #e1ad01;
+    color: white;
+}
+.main_content_div{
+    width: 100%;
+    padding: 20px;
+    height: 95vh;
+
+    .add_card{
+        display: block;
+        text-align: right;
+        margin-top: 30px;
+        color: lightgray;        
+    }
+
+    .btn_div{
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        left: 0;
+        padding: 20px;
+
+        ion-label{
+            display: block;
+            color: lightgray;
+            margin-bottom: 50px;
+        }
+        span{
+            position: absolute;
+            right: 20px;
+            color: black;
+            font-weight: 600;
+        }
+        
+        ion-button{
+            --background: #e1ad01;
+        }
+    }
+}

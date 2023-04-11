@@ -1,0 +1,72 @@
+.main_content_div{
+    #myVideo {
+        position: fixed;
+        right: 0;
+        bottom: 0;
+        min-width: 100%; 
+        min-height: 100%;
+    }
+      
+    .content {
+        position: fixed;
+        background: rgba(0, 0, 0, 0.5);
+        right: 0;
+        bottom: 0;
+        min-width: 100%; 
+        min-height: 100%;
+        padding: 20px;
+
+        ion-icon{
+            font-size: 30px;
+            color: white;
+        }
+
+        .form_div{
+            margin-top: 130px;
+        }
+
+        .head_lbl{
+            text-align: center;
+            color: white;
+            font-weight: 500;
+            font-size: 22px;
+            margin-bottom: 20px;
+        }
+        ion-label {
+            display: block;
+        }
+
+        .small_lbl{
+            color: white;
+            margin-bottom: 5px;
+        }
+        ion-input{
+            border: 1px solid white;
+            --padding-start : 8px;
+            border-radius: 5px;
+            margin-bottom: 15px;
+            --placeholder-color: white;
+            color: white;
+        }
+
+        ion-button{
+            --border-radius: 5px;
+            --border-color: white;
+            color: white;
+            font-weight: 600;
+            margin-top: 30px;
+        }
+        .bottom_lbl{
+            display: block;
+            text-align: center;
+            margin-top: 20px;
+            color: white;
+        }
+        .signup_span{
+            font-weight: 500;
+            color: white;
+        }
+    }
+}
+
+

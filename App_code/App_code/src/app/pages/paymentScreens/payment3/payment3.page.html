@@ -1,0 +1,58 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button mode="md"></ion-back-button>
+    </ion-buttons>
+    <ion-title>payment3</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="main_content_div">
+
+    <ion-label>Total <span class="price">$1,200</span></ion-label>
+
+    <ion-label>1. Select Your Payment Method</ion-label>
+    <ion-row style="margin-top: 20px;">
+      <ion-col size="4">
+        <div class="square_div" [class.yellow]="id == 1" (click)="changeMethod(1)">
+          <img class="gray_img" *ngIf="id != 1" src="assets/imgs/card2.png">
+          <img class="gray_img" *ngIf="id == 1" src="assets/imgs/card1.png">
+        </div>
+      </ion-col>
+      <ion-col size="4" (click)="changeMethod(2)">
+        <div class="square_div" [class.yellow]="id == 2">
+          <img class="gray_img" *ngIf="id != 2" src="assets/imgs/money2.png">
+          <img class="gray_img" *ngIf="id == 2" src="assets/imgs/money1.png">
+        </div>
+      </ion-col>
+      <ion-col size="4" (click)="changeMethod(3)">
+        <div class="square_div" [class.yellow]="id == 3">
+          <img class="gray_img" *ngIf="id != 3" src="assets/imgs/paypal2.png">
+          <img class="gray_img" *ngIf="id == 3" src="assets/imgs/paypal1.png">
+        </div>
+      </ion-col>
+    </ion-row>
+
+    <ion-label>2. Enter Your Card Detail</ion-label>
+
+    <ion-label>Card Number</ion-label>
+    <ion-input type="text" placeholder="XXXX-XXXX-XXXX-4242"></ion-input>
+
+    <ion-row>
+      <ion-col size="4" class="left_col">
+        <ion-datetime display-format="MM" placeholder="MM"></ion-datetime>
+      </ion-col>
+      <ion-col size="4">
+        <ion-datetime display-format="YYYY" placeholder="YYYY"></ion-datetime>
+      </ion-col>
+      <ion-col size="4" class="right_col">
+        <ion-input type="text" placeholder="cvv"></ion-input>
+      </ion-col>
+    </ion-row>
+
+    <ion-button expand="block" fill="clear" shape="round">
+      CONFIRM
+    </ion-button>
+  </div>
+</ion-content>

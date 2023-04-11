@@ -1,0 +1,114 @@
+ion-content{
+    --background: #253A4B;
+}
+.main_content_div{
+    width: 100%;
+    position: relative;
+
+    ion-icon{
+        font-size: 30px;
+        color: white;
+        margin-left: 16px;
+        margin-top: 16px;
+    }
+
+    .green_curve{
+        background-color:#028364;
+        width:130%;
+        height:300px;
+        border-bottom-left-radius:50%;
+        border-bottom-right-radius:50%;
+        position: absolute;
+        left: 50%;
+        transform: translate(-50%);
+        position: absolute;
+    }
+    .black_curve{
+        background: #253A4B;
+        height: 170px;
+        width: 150%;
+        position: absolute;
+        z-index: 99;
+        border-bottom-left-radius: 50%;
+        border-bottom-right-radius: 50%;
+        position: absolute;
+        left: 65%;
+        transform: translate(-75%);
+        position: absolute;
+
+        .car{
+            width: 100px;
+            left: 56%;
+            position: absolute;
+            margin-top: 30px;
+        }
+    }
+    .black_green_curve{
+        background: #1A4E52;
+        height: 230px;
+        width: 150%;
+        position: absolute;
+        z-index: 9;
+        border-bottom-left-radius: 50%;
+        border-bottom-right-radius: 50%;
+        position: absolute;
+        left: 65%;
+        transform: translate(-75%);
+        position: absolute;
+    }
+    .upper_curve{
+        height: 230px;
+        width: 150%;
+        position: absolute;
+        z-index: 999;
+        border-radius: 50%;
+        box-shadow: 15px 15px 0 0 red;
+    }
+
+    .form_div{
+        // padding: 20px;
+        padding-top: 300px;
+        padding-left: 20px;
+        padding-right: 20px;
+
+        .head_lbl{
+            color: white;
+            font-size: 25px;
+            margin-bottom: 20px;
+            display: block;
+        }
+
+        ion-input{
+            color: white;
+            border-bottom: 1px solid white;
+            margin-bottom: 20px;
+            color: white;
+        }
+
+        ion-button{
+            margin-top: 30px;
+            color: white;
+            --border-radius: 5px;
+            --background: #028364;
+            --border-color: #028364;
+
+        }
+        .bottom_lbl{
+            display: block;
+            text-align: center;
+            color: white;
+            margin-top: 20px;
+        }
+
+        .forgot{
+            display: block;
+            color: white;
+            text-align: right;
+            margin-top: 10px;
+            margin-bottom: 20px;
+        }
+        .signup_span{
+            font-weight: 600;
+        }
+    }
+}

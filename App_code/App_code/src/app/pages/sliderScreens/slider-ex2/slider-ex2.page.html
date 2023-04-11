@@ -1,0 +1,38 @@
+<ion-content>
+  <div class="overlay"> 
+    <ion-icon name="arrow-back-outline" [class.ios_pad]="plt == 'ios'" (click)="goBack()"></ion-icon>
+  </div>
+
+  <ion-slides mode="ios" pager="ios" [options]="slideOpts">
+    <ion-slide>
+      <div class="back_image" [style.backgroundImage]="'url(assets/imgs/slide1.jpg)'">
+        <ion-label class="lbl_content">
+          Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+          Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
+          when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+        </ion-label>
+      </div>
+    </ion-slide>
+
+    <ion-slide>
+      <div class="back_image" [style.backgroundImage]="'url(assets/imgs/slide2.jpg)'">
+        <ion-label class="lbl_content">
+          Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+          Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
+          when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+        </ion-label>
+      </div>
+    </ion-slide>
+
+    <ion-slide>
+      <div class="back_image" [style.backgroundImage]="'url(assets/imgs/slide3.jpg)'">
+        <ion-label class="lbl_content">
+          Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+          Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
+          when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+        </ion-label>
+      </div>
+    </ion-slide>
+
+  </ion-slides>
+</ion-content>

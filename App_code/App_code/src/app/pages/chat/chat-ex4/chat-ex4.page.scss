@@ -1,0 +1,199 @@
+.header_div{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+    justify-content: space-between;
+    height: 65px;
+    border-bottom: 1px solid lightgray;
+    background-color: #4BE3B0;
+
+    .first_div{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        color: white;
+        font-weight: bold;
+    }
+
+    .back_image{
+        width: 45px;
+        height: 45px;
+        border-radius: 100%;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        min-width: 45px;
+        margin-right: 10px;
+    }
+    
+    .username{
+        font-weight: 600;
+        color: white;
+    }
+    ion-icon{
+        color: white;
+    }
+}
+.main_content_div{
+    width: 100%;
+    padding: 15px;
+
+    .back_image{
+        width: 45px;
+        height: 45px;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        min-width: 45px;
+        border: 5px solid white;
+        position: absolute;
+        bottom: -35px;
+        left: -5px;
+    }
+
+    .left_div{
+        width: 100%;
+        display: flex;
+        margin-bottom: 15px;
+
+        .back_image{
+            width: 45px;
+            height: 45px;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            min-width: 45px;
+            border: 5px solid white;
+            position: absolute;
+            bottom: -35px;
+            left: -5px;
+        }
+
+        .inner_div{
+            width: 70%;
+            position: relative;
+            padding-left: 10px;
+        }
+
+        .msg_div{
+            background: #F0EFF5;
+            display: flex;
+            align-items: center;
+            padding: 10px 15px;
+            border-radius: 5px;
+            margin-left: 5px;
+            position: relative;
+            padding-left: 20px;
+        }
+    }
+    .right_div{
+        display: flex;
+        width: 100%;
+        margin-bottom: 15px;
+        justify-content: flex-end;
+
+        .inner_div{
+            width: 70%;
+            display: flex;
+            flex-direction: row;
+            justify-content: flex-end;
+            position: relative;
+        }
+
+        .msg_div{
+            background: #4BE3B0;
+            display: flex;
+            align-items: center;
+            padding: 10px 15px;
+            border-radius: 5px;
+            margin-right: 5px;
+            color: white;
+            position: relative;
+            padding-right: 20px;
+        }
+
+        .back_image{
+            width: 45px;
+            height: 45px;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            min-width: 45px;
+            border: 5px solid white;
+            // position: absolute;
+            // bottom: -35px;
+            // left: -5px;
+        }
+    }
+
+    .right_div2{
+        display: flex;
+        width: 100%;
+        margin-bottom: 15px;
+        justify-content: flex-end;
+        position: relative;
+        padding-right: 10px;
+
+
+        .inner_div2{
+            width: 70%;
+            // display: contents;
+            display: flex;
+            // flex-direction: row;
+            justify-content: flex-end;
+            // position: relative;
+        }
+
+        .msg2_div{
+            background: #4BE3B0;
+            width: auto;
+            padding: 10px 15px;
+            border-radius: 5px;
+            color: white;
+            padding-right: 20px;
+            margin-right: 5px;
+        }
+
+        .back_image{
+            width: 45px;
+            height: 45px;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            min-width: 45px;
+            border: 5px solid white;
+            position: absolute;
+            bottom: -35px;
+            left: 90%;
+        }
+    }
+}
+
+ion-footer{
+    padding: 10px 10px;
+    .footer_div{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 5px 0px;
+        width: 100%;
+        border: 1px solid lightgray;
+        border-radius: 25px;
+
+    }
+    ion-input{
+        --padding-start: 8px;
+    }
+
+    .smiley{
+        font-size: 35px;
+        margin-left: 10px;
+        color: lightgray;
+    }
+    .send{
+        font-size: 35px;
+        margin-right: 10px;
+        color: #4BE3B0;
+    }
+}

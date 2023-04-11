@@ -1,0 +1,88 @@
+.main_content_div{
+    width: 100%;
+    // position: relative;
+
+    .back_btn{
+        font-size: 25px;
+        margin-left: 16px;
+        margin-top: 16px;
+    }
+
+    .main_round{
+        height: 130px;
+        width: 130px;
+        border-radius: 100%;
+        border: 3px solid skyblue;
+        margin: auto;
+        display: block;
+        margin-top: 80px;
+        position: relative;
+
+        .user_image{
+            height: 115px;
+            width: 115px;
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+            border-radius: 100%;
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%,-50%);
+        }
+
+        .white_div{
+            width: 65px;
+            height: 65px;
+            border-radius: 100%;
+            background-color: white;
+            position: absolute;
+            bottom: -25px;
+            left: 50%;
+            transform: translate(-50%);
+
+            ion-icon{
+                position: absolute;
+                left: 50%;
+                top: 50%;
+                transform: translate(-50%,-50%);
+                font-size: 22px;
+                color: skyblue;
+            }
+        }
+    }
+
+    .content_div{
+        padding: 20px;
+
+        ion-label {
+            display: block;
+        }
+        .username{
+            font-weight: 600;
+            text-align: center;
+        }
+        .small_lbl{
+            color: gray;
+            text-align: center;
+            margin-top: 5px;
+        }
+
+        .head_lbl{
+            font-weight: 600;
+            margin-top: 30px;
+            margin-bottom: 15px;
+        }
+        .about_lbl{
+            color: lightgray;
+            line-height: 1.4rem;
+        }
+        .back_image{
+            height: 100px;
+            width: 100%;
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+        }
+    }
+}

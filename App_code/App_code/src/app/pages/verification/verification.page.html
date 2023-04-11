@@ -1,0 +1,55 @@
+<ion-header>
+  <ion-toolbar color="secondary">
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>Verification</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <div class="main_content_div">
+    <ion-label class="head_lbl">Angular OTP Input</ion-label>
+
+    <div class="check_div">
+      <input type="checkbox" class="check" name="number-only" id="number-only" [(ngModel)]="config.allowNumbersOnly"
+        (change)="onConfigChange()">
+      <span>Allow Number Only</span>
+    </div>
+
+    <div class="check_div">
+      <input type="checkbox" class="check" name="pass-input" id="pass-input" [(ngModel)]="config.isPasswordInput"
+        (change)="onConfigChange()">
+      <span>Password Input</span>
+    </div>
+
+    <div class="check_div">
+      <input type="checkbox" class="check" name="disable-focus" id="disable-focus" [(ngModel)]="config.disableAutoFocus"
+        (change)="onConfigChange()">
+      <span>Disable Auto Focus</span>
+    </div>
+
+    <div class="form_div">
+      <ion-label class="lbl">Number of Inputs</ion-label>
+      <input type="number" name="input-length" [(ngModel)]="config.length" min="1" max="10"
+        (ngModelChange)="onConfigChange()">
+
+      <ion-label class="lbl">Placeholder</ion-label>
+      <input type="text" name="input-placeholder" [(ngModel)]="config.placeholder" maxlength="1"
+        (change)="onConfigChange()">
+
+      <ion-label class="lbl">Update Value To</ion-label>
+      <input type="text" #valInput name="input-update-val" placeholder="Focus out to change"
+        (change)="setVal(valInput.value)" min="1" max="10">
+    </div>
+
+    <div class="card">
+      <ion-label class="head_lbl">Enter verification code</ion-label>
+      <ng-otp-input #ngOtpInput (onInputChange)="onOtpChange($event)" *ngIf="showOtpComponent" [config]="config">
+      </ng-otp-input>
+      <span *ngIf="otp" class="o-t-p">Entered otp : {{otp}}</span>
+    </div>
+    
+  </div>
+</ion-content>

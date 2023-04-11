@@ -1,0 +1,23 @@
+<ion-header>
+  <ion-toolbar color="secondary">
+    <ion-title>User Text Avatar</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list>
+    <ion-item *ngFor="let user of users">
+      <ion-avatar slot="start">
+        <app-text-avatar [text]="user.name" [color]="user.color"></app-text-avatar>
+      </ion-avatar>
+
+      <ion-label>
+        <ion-text>
+          <h3>{{ user.name }}</h3>
+        </ion-text>
+
+        <p>{{ user.company }} - {{ user.job_title }}</p>
+      </ion-label>
+    </ion-item>
+  </ion-list>
+</ion-content>

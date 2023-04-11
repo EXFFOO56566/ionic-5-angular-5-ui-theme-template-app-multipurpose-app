@@ -1,0 +1,21 @@
+.main_content_div{
+    width: 100%;
+
+    .back_image{
+        height: 150px;
+        width: 100%;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        position: relative;
+
+        .bottom_div{
+            height: 50px;
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+            color: white;
+            padding-left: 10px;
+        }
+    }
+}

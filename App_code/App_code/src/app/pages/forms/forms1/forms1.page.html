@@ -1,0 +1,33 @@
+<ion-header>
+  <ion-toolbar color="secondary">
+    <ion-buttons slot="start">
+      <ion-back-button mode="md"></ion-back-button>
+    </ion-buttons>
+    <ion-title>
+      Contact Us
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content class="ion-padding">
+
+  <ion-list lines="none" class="contactFormList">
+
+    <ion-item class="inputs-item" lines="none">
+      <ion-input type="text" placeholder="Name"></ion-input>
+    </ion-item>
+
+    <ion-item class="inputs-item" lines="none">
+      <ion-input type="email" placeholder="Email Address"></ion-input>
+    </ion-item>
+
+    <ion-item class="inputs-item" lines="none">
+      <ion-input type="number" placeholder="Mobile Phone"></ion-input>
+    </ion-item>
+
+    <ion-item class="inputs-item" lines="none">
+      <ion-textarea placeholder="Message" rows="6"></ion-textarea>
+    </ion-item>
+
+  </ion-list>
+  <ion-button expand="block" color="secondary" (click)="sendMessage()">Send Messages</ion-button>
+</ion-content>

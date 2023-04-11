@@ -1,0 +1,91 @@
+.main_content_div{
+    width: 100%;
+    padding: 20px;
+
+    ion-label {
+        display: block;
+    }
+
+    .line_div{
+        width: 100%;
+        height: 1px;
+        background: lightgray;
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+
+    .upper_div{
+        display: flex;
+        // width: 100%;
+        // justify-content: space-between;
+        .user_image{
+            height: 200px;
+            width: 150px;
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+            border: 10px solid #f3f3f3;
+            min-width:  150px;        
+        }
+        .detail_div{
+            padding-left: 20px;
+            width: 100%;
+
+            .header_lbl{
+                font-weight: 600;
+                text-align: left;
+                color: black !important;
+            }
+            ion-label {
+                text-align: right;
+                margin-top: 10px;
+                color: gray;
+            }
+
+            .tab_div{
+                display: flex;
+                width: 100%;
+                justify-content: space-between;
+
+                .bold_lbl{
+                    font-weight: 600;
+                }
+
+                ion-label {
+                    text-align: center;
+                }
+            }
+        }
+    }
+
+    .name_div{
+        margin-top: 30px;
+
+        .username{
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+        .gray_lbl{
+            color: lightgray;
+        }
+    }
+
+    .last_div{
+
+        .header_lbl{
+            font-weight: 600;
+            font-size: 20px;
+            margin-bottom: 20px;
+            margin-top: 20px;
+
+        }
+
+        ion-row{
+            display: flex;
+            align-items: center;
+        }
+        ion-progress-bar{
+            --progress-background  : #1A4E52;
+        }
+    }
+}

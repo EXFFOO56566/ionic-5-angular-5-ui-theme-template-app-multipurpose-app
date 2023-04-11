@@ -1,0 +1,52 @@
+<ion-header>
+  <ion-toolbar color="secondary">
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>
+      Item Ribbon
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list>
+    <ion-item *ngFor="let item of thumbnails">
+      <ion-thumbnail slot="start" class="item-ribbon">
+        <span class="ribbon ">
+          <span>{{ item.ribbonText }}</span>
+        </span>
+        <img [src]="item.image">
+      </ion-thumbnail>
+      <div>
+        <p>{{ item.title }}</p>
+      </div>
+    </ion-item>
+
+    <ion-item class="item-ribbon">
+      <span class="ribbon cruzeiro">
+        <span>Ionic</span>
+      </span>
+      <ion-thumbnail item-left>
+        <img src="assets/ribbons/ionic.png" alt="">
+      </ion-thumbnail>
+      <div>
+        <p>Awesome framework</p>
+      </div>
+    </ion-item>
+
+    <ion-item class="item-ribbon">
+      <span class="ribbon javascript">
+        <span>JS</span>
+      </span>
+      <ion-thumbnail item-left>
+        <img src="assets/ribbons/js.png" alt="">
+      </ion-thumbnail>
+      <div>
+        <p>Awesome language</p>
+      </div>
+    </ion-item>
+
+  </ion-list>
+
+</ion-content>

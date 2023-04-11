@@ -1,0 +1,26 @@
+<ion-header>
+  <ion-toolbar color="secondary">
+    <ion-buttons slot="start">
+      <ion-back-button mode="md"></ion-back-button>
+    </ion-buttons>
+    <ion-title>E-commerce Example 4</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="main_content_div">
+
+    <div class="card_div" *ngFor="let item of allProducts">
+      <div class="back_image" [style.backgroundImage]="'url( ' + item.url + ' )'"></div>
+      <div class="second_div">
+        <ion-label class="name_lbl">{{item.name}}</ion-label>
+        <ion-label class="price_lbl">$ {{item.price}}</ion-label>
+        <ion-button size="small" fill="outline" shape="round">
+          Add to Cart
+        </ion-button>
+
+        <ion-icon name="heart-outline"></ion-icon>
+      </div>
+    </div>
+  </div>
+</ion-content>

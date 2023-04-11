@@ -1,0 +1,35 @@
+<!-- <ion-header>
+  <ion-toolbar color="secondary">
+    <ion-title>login-ex3</ion-title>
+  </ion-toolbar>
+</ion-header> -->
+
+
+
+<ion-content>
+  <div class="main_content_div" [class.ios_pad]="plt == 'ios'">
+    
+    <ion-icon name="arrow-back-outline" (click)="goBack()"></ion-icon>
+
+    <div class="green_curve"></div>
+    <div class="black_curve">
+      <img src="assets/imgs/car.png" class="car">
+    </div>
+    <div class="black_green_curve"></div>
+
+    <div class="form_div">
+      <ion-label class="head_lbl">Sign Up</ion-label>
+
+      <ion-input type="text" placeholder="First Name"></ion-input>
+      <ion-input type="text" placeholder="Last Name"></ion-input>
+      <ion-input type="text" placeholder="Email ID"></ion-input>
+      <ion-input type="text" placeholder="Password"></ion-input>
+
+      <ion-button expand="block" fill="outline">
+        Sign Up
+      </ion-button>
+
+      <ion-label class="bottom_lbl">Already have an Account ? <span class="signup_span">Login</span></ion-label>
+    </div>
+  </div>
+</ion-content>

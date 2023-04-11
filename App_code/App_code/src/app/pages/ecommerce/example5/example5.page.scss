@@ -1,0 +1,55 @@
+.main_content_div{
+    width: 100%;
+    padding: 16px;
+
+    ion-row{
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+
+        ion-col{
+            border: 1px solid lightgray;
+            padding: 0px;
+            border-radius: 5px;
+            margin-bottom: 10px;
+            position: relative;
+            box-shadow: 0px 3px 6px rgba(0,0,0,0.1);
+
+            .back_image{
+                height: 150px;
+                width: 100%;
+                background-repeat: no-repeat;
+                background-position: center;
+                background-size: cover;
+                // border-radius: 3px;
+                position: relative;
+                border-top-left-radius: 5px;
+                border-top-right-radius: 5px;
+
+                ion-icon{
+                    position: absolute;
+                    right: 5px;
+                    padding: 5px;
+                    background: white;
+                    border-radius: 50%;
+                    box-shadow: 0px 3px 6px rgba(0,0,0,0.3);
+                    top: 5px;
+                    font-size: 16px;
+                    color: #29b507;
+                }
+            }
+            ion-label{
+                display: block;
+                margin-top: 5px;
+                margin-left: 5px;
+            }
+            .name{
+                font-size: 14px;
+            }
+            .prize{
+                font-weight: 600;
+                margin-bottom: 5px;
+            }
+        }
+    }
+}

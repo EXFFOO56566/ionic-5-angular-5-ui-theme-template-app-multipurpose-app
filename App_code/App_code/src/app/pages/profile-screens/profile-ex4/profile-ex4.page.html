@@ -1,0 +1,57 @@
+<!-- <ion-header>
+  <ion-toolbar color="secondary">
+    <ion-title>profile-ex4</ion-title>
+  </ion-toolbar>
+</ion-header> -->
+
+<ion-content>
+  <div class="main_content_div">
+    <ion-icon name="arrow-back-outline" class="back_btn" [class.ios_pad]="plt == 'ios'" (click)="goBack()"></ion-icon>
+
+    <div class="cover_div" [style.backgroundImage]="'url(assets/imgs/cover.jpg)'">
+      <div class="overlay"></div>
+      <div class="user_image" [style.backgroundImage]="'url(assets/imgs/user2.jpg)'"></div>
+
+      <div class="detail_div">
+        <ion-label class="username">Jonh Doe</ion-label>
+        <ion-label class="location">Paris, France</ion-label>
+
+        <div class="flex_div">
+          <div>
+            <ion-label class="bold">10.2 k</ion-label>
+            <ion-label>Followers</ion-label>
+          </div>
+          <div>
+            <ion-label class="bold">70</ion-label>
+            <ion-label>Following</ion-label>
+          </div>
+          <div>
+            <ion-label class="bold">700</ion-label>
+            <ion-label>Posts</ion-label>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="bottom_div">
+      <ion-label class="head_lbl">About</ion-label>
+      <ion-label class="about_lbl">
+        Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+        Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.
+      </ion-label>
+
+      <ion-label class="head_lbl">Posts</ion-label>
+
+      <ion-grid fixed>
+        <ion-row>
+          <ion-col size="4" *ngFor="let item of dummyData">
+            <div class="back_image" [style.backgroundImage]="'url(' + item.url + ')'"></div>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+    </div>
+
+
+  </div>
+</ion-content>

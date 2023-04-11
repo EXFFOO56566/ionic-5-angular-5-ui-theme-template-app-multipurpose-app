@@ -1,0 +1,59 @@
+<!-- <ion-header>
+  <ion-toolbar color="secondary">
+    <ion-title>profile-ex1</ion-title>
+  </ion-toolbar>
+</ion-header> -->
+
+<ion-content>
+  <div class="main_content_div">
+
+    <ion-icon name="arrow-back-outline" [class.ios_pad]="plt == 'ios'" class="back_btn" (click)="goBack()"></ion-icon>
+
+    <div class="back_image" [style.backgroundImage]="'url(assets/imgs/cover.jpg)'"></div>
+    <div class="user_image" [style.backgroundImage]="'url(assets/imgs/user1.jpg)'"></div>
+
+    <div class="detail_div">
+      <ion-label class="username">Jonh Doe</ion-label>
+      <ion-label class="location">
+        <ion-icon name="location"></ion-icon> Paris, France
+      </ion-label>
+
+      <div class="follow_div">
+        <ion-button shape="round">
+          Follow
+        </ion-button>
+        <img src="assets/imgs/email.png" class="email">
+      </div>
+
+      <div class="following_div">
+        <div>
+          <ion-label class="bold_lbl">200</ion-label>
+          <ion-label>Posts</ion-label>
+        </div>
+        <div>
+          <ion-label class="bold_lbl">10.3 k</ion-label>
+          <ion-label>Followers</ion-label>
+        </div>
+        <div>
+          <ion-label class="bold_lbl">700</ion-label>
+          <ion-label>Following</ion-label>
+        </div>
+      </div>
+
+      <div class="post_feed">
+        <div class="card_div" *ngFor="let item of data">
+          <div class="back_img" [style.backgroundImage]="'url(' + item.url + ')'"></div>
+          <div class="like_div">
+            <ion-icon name="heart-outline" style="font-size: 28px;"></ion-icon>
+            <ion-icon name="chatbubble-outline"></ion-icon>
+            <ion-icon name="bookmark-outline"></ion-icon>
+          </div>
+          <div class="caption_div">
+            Liked by <span>Jonh Doe and 33 others</span> #Nightout unknown place
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</ion-content>

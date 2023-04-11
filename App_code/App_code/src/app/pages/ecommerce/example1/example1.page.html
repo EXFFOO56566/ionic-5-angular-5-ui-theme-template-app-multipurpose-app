@@ -1,0 +1,44 @@
+<ion-header>
+  <ion-toolbar color="secondary">
+    <ion-buttons slot="start">
+      <ion-back-button mode="md"></ion-back-button>
+    </ion-buttons>
+    <ion-title>E-commerce Example 1</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="main_content_div">
+
+    <ion-label class="header_lbl">New Products</ion-label>
+
+    <span *ngFor="let item of allProducts; let i = index">
+
+      <div class="left_div" *ngIf="i%2 == 0">
+        <div class="back_image" [style.backgroundImage]="'url(' + item.url + ')'"></div>
+        <div class="second_div">
+          <ion-label class="name">{{item.name}}</ion-label>
+          <ion-label class="prize">$ {{item.price}}</ion-label>
+          <!-- <ion-icon name="cart"></ion-icon> -->
+          <ion-button size="small" fill="outline" shape="round">
+            Add to Cart
+          </ion-button>
+        </div>
+      </div>
+
+      <div class="right_div" *ngIf="i%2 == 1">
+        <div class="second_div">
+          <ion-label class="name">{{item.name}}</ion-label>
+          <ion-label class="prize">$ {{item.price}}</ion-label>
+          <!-- <ion-icon name="cart"></ion-icon> -->
+          <ion-button size="small" fill="outline" shape="round">
+            Add to Cart
+          </ion-button>
+        </div>
+        <div class="back_image" [style.backgroundImage]="'url(' + item.url + ')'"></div>
+      </div>
+
+    </span>
+
+  </div>
+</ion-content>

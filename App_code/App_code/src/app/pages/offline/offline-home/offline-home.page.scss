@@ -1,0 +1,25 @@
+
+.div_logo{
+    width: 100%;
+    text-align: center;
+    .new_title{
+        font-size: 1rem;
+    }
+    .img{
+        width: 20%;
+        margin-top: 5% !important;
+    }
+}
+.list-more {
+    font-size: 25px !important;
+    position: absolute;
+    right: -10px;
+    top: -18px;
+}
+.text-primary {
+    color: var( --ion-color-primary) !important;
+}
+.list-source-name {
+    font-size: 12px;
+    color: lightgray;
+}

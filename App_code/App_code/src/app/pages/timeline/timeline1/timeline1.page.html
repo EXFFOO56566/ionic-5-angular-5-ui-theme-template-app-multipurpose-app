@@ -1,0 +1,44 @@
+<ion-header>
+  <ion-toolbar color="secondary">
+    <ion-buttons slot="start">
+      <ion-back-button mode="md"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Timeline 1</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="main_content_div">
+
+    <div class="card_div" *ngFor="let item of [1,2,3,4,5]; let i = index">
+
+      <div class="flex_div">
+        <div class="back_image" [style.backgroundImage]="'url(assets/imgs/user2.jpg)'"></div>
+        <div class="user_div">
+          <ion-label class="username">Jonh Doe</ion-label>
+          <ion-label class="location">Paris, France</ion-label>
+        </div>
+      </div>
+
+      <div class="content_div">
+
+        <ion-label>
+          Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+          Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.
+        </ion-label>
+
+        <div class="back_img" *ngIf="i == 1" [style.backgroundImage]="'url(assets/imgs/image1.jpg)'"></div>
+      </div>
+
+      <div class="bottom_div">
+        <ion-icon name="thumbs-up-sharp"></ion-icon>
+        <ion-label>12 Likes</ion-label>
+        <ion-icon name="chatbox-ellipses"></ion-icon>
+        <ion-label>4 Comments</ion-label>
+        <span class="time">4 days ago</span>
+      </div>
+
+    </div>
+
+  </div>
+</ion-content>

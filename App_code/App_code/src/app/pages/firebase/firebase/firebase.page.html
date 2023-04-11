@@ -1,0 +1,35 @@
+<ion-header>
+  <ion-toolbar color="secondary">
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>
+      Firebase CRUD
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content class="ion-padding">
+  <ion-list lines="none">
+    <ion-item>
+      <ion-label class="ion-text-center">Resources</ion-label>
+    </ion-item>
+    <ion-button (click)="firebaseLogin()" expand="block" id="g1">
+      Firebase Login
+    </ion-button>
+
+    <ion-button (click)="firebaseSignup()" expand="block" id="g2">
+      Firebase Signup
+    </ion-button>
+
+    <ion-button (click)="firebaseList()" expand="block" id="g3">
+      Firebase List
+    </ion-button>
+
+    <ion-button (click)="firebaseimageUpload()" expand="block" id="g4">
+      Firebase Image Upload
+    </ion-button>
+
+
+  </ion-list>
+
+</ion-content>

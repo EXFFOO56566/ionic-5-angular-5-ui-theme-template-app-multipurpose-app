@@ -1,0 +1,97 @@
+.main_content_div{
+    width: 100%;
+    padding : 20px;
+
+    .header_lbl{
+        display: block;
+        margin-top: 10px;
+        margin-bottom: 20px;
+        font-weight: 600;
+        font-size: 22px;
+    }
+
+    ion-label {
+        display: block;
+        margin-top: 10px;
+    }
+    .prize{
+        font-weight: 600;
+    }
+    .name{
+        color: gray;
+    }
+
+    .back_image{
+        height: 110px;
+        width: 110px;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        border-radius: 5px;
+        min-width: 110px;
+    }
+
+    .left_div{
+        border-radius: 5px;
+        box-shadow: 0px 6px 15px rgba(0,0,0,0.3);
+        padding: 10px;
+        display: flex;
+        width: 100%;
+        margin-bottom: 15px;
+        .second_div{
+            padding-left: 20px;
+            width: 100%;
+            position: relative;
+
+            // ion-icon{
+            //     position: absolute;
+            //     right: 0;
+            //     bottom : 0;
+            //     font-size: 23px;
+            //     color: #73D25C;
+            // }
+
+            ion-button{
+                position: absolute;
+                right: 0;
+                bottom: 0;
+                width: 90px;
+                font-size: 12px;
+                color: #29b507;
+                --border-color: #73D25C;
+            }
+        }
+    }
+
+    .right_div{
+        border-radius: 5px;
+        box-shadow: 0px 6px 15px rgba(0,0,0,0.3);
+        padding: 10px;
+        display: flex;
+        width: 100%;
+        margin-bottom: 15px;
+        .second_div{
+            padding-right: 20px;
+            width: 100%;
+            position: relative;
+
+            // ion-icon{
+            //     position: absolute;
+            //     left: 0;
+            //     bottom : 0;
+            //     font-size: 23px;
+            //     color: #73D25C;
+            // }
+
+            ion-button{
+                position: absolute;
+                left: 0;
+                bottom: 0;
+                width: 90px;
+                font-size: 12px;
+                color: #29b507;
+                --border-color: #73D25C;
+            }
+        }
+    }
+}

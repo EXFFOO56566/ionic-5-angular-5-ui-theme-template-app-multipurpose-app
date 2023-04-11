@@ -1,0 +1,34 @@
+<ion-header>
+  <ion-toolbar color="secondary">
+    <ion-buttons slot="start">
+      <ion-back-button mode="md"></ion-back-button>
+    </ion-buttons>
+    <ion-title>
+      Add New Image List
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <div class="div_img" (click)="addImage()">
+    <img src="assets/images/camera1.png" *ngIf="image ==''" class="img_logo" />
+    <ion-spinner name="circles" *ngIf="uploading" class="my_spin"></ion-spinner>
+    <img [src]="image" *ngIf="image != ''" class="img_logo" />
+  </div>
+  <ion-item>
+    <ion-label position="floating">Title</ion-label>
+    <ion-input [(ngModel)]="title"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label position="floating">Description</ion-label>
+    <ion-textarea [(ngModel)]="description"></ion-textarea>
+  </ion-item>
+
+  <ion-button expand="block" color="secondary" margin-top (click)="addList()" [disabled]="isCreate">
+    <span *ngIf="!isCreate">
+      Add List
+    </span>
+    <ion-spinner name="dots" *ngIf="isCreate"></ion-spinner>
+  </ion-button>
+</ion-content>

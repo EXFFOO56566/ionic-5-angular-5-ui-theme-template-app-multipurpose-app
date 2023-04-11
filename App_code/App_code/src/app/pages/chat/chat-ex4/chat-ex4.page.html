@@ -1,0 +1,60 @@
+<ion-header>
+  <!-- <ion-toolbar color="secondary">
+    <ion-buttons slot="start">
+      <ion-back-button text="" mode="md"></ion-back-button>
+    </ion-buttons>
+    <ion-title>chatEx4</ion-title>
+  </ion-toolbar> -->
+
+  <div class="header_div">
+    <div class="first_div">
+      <ion-buttons slot="start">
+        <ion-back-button mode="md" color="light"></ion-back-button>
+      </ion-buttons>
+      <div class="back_image" [style.backgroundImage]="'url(assets/imgs/user1.jpg)'"></div>
+      <ion-label>Jonh Doe</ion-label>
+    </div>
+    <div>
+      <ion-button fill="clear" size="small">
+        <ion-icon slot="icon-only" name="call"></ion-icon>
+      </ion-button>
+      <ion-button fill="clear" size="small">
+        <ion-icon slot="icon-only" name="ellipsis-vertical"></ion-icon>
+      </ion-button>
+    </div>
+  </div>
+
+</ion-header>
+
+<ion-content>
+  <div class="main_content_div">
+
+    <span *ngFor="let item of msgs">
+      <div class="left_div" *ngIf="item.side == 'left'">
+        <div class="inner_div">
+          <div class="msg_div">
+            <ion-label>{{item.msg}}</ion-label>
+          </div>
+          <div class="back_image" [style.backgroundImage]="'url(assets/imgs/user1.jpg)'"></div>
+        </div>
+      </div>
+
+      <div class="right_div2" *ngIf="item.side == 'right'">
+        <div class="inner_div2">
+          <div class="msg2_div">
+            <ion-label>{{item.msg}}</ion-label>
+          </div>
+          <div class="back_image" [style.backgroundImage]="'url(assets/imgs/user2.jpg)'"></div>
+        </div>
+      </div>
+    </span>
+  </div>
+</ion-content>
+
+<ion-footer>
+  <div class="footer_div">
+    <ion-icon name="happy-outline" class="smiley"></ion-icon>
+    <ion-input type="text" placeholder="Type Here.."></ion-input>
+    <ion-icon name="navigate-circle" class="send"></ion-icon>
+  </div>
+</ion-footer>

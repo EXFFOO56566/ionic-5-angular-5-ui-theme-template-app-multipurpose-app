@@ -1,0 +1,53 @@
+<ion-header class="ion-no-border">
+  <ion-toolbar>
+    <ion-buttons slot="end">
+      <ion-button color='dark' (click)="startApp()" [hidden]="!showSkip">skip </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content fullscreen class="bg">
+  <ion-slides #slides (ionSlideWillChange)="onSlideChangeStart($event)" pager="true" [options]="slideOpts">
+    <ion-slide>
+      <img src="assets/intro/1.png" class="slide-image" />
+      <h2 class="slide-title">
+        Take First Step
+      </h2>
+      <p>
+        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's
+        standard
+        dummy text ever since the
+      </p>
+    </ion-slide>
+
+    <ion-slide>
+      <img src="assets/intro/2.png" class="slide-image" />
+      <h2 class="slide-title">Take Second Step</h2>
+      <p>
+        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's
+        standard
+        dummy text ever since the
+      </p>
+    </ion-slide>
+    <ion-slide>
+      <img src="assets/intro/3.png" class="slide-image" />
+      <h2 class="slide-title">Take Third Step</h2>
+      <p>
+        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's
+        standard
+        dummy text ever since the</p>
+    </ion-slide>
+
+    <ion-slide>
+      <img src="assets/intro/4.png" class="slide-image" />
+      <h2 class="slide-title">Take Last Step</h2>
+      <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's
+        standard
+        dummy text ever since the</p>
+      <ion-button fill="clear" color="dark" (click)="startApp()">
+        Continue
+        <ion-icon slot="end" name="arrow-forward"></ion-icon>
+      </ion-button>
+    </ion-slide>
+  </ion-slides>
+</ion-content>

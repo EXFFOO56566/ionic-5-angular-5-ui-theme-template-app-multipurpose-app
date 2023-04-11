@@ -1,0 +1,60 @@
+ion-toolbar{
+    --background: #e1ad01;
+    color: white;
+}
+.main_content_div{
+    width: 100%;
+    padding: 20px;
+
+    .square_div{
+        background: whitesmoke;
+        width: 100%;
+        height: 100px;
+        position: relative;
+    }
+
+    ion-label {
+        display: block;
+        margin-top: 20px;
+        color: gray;
+    }
+
+    .price{
+        font-weight: bold;
+        margin-left: 20px;
+        color: black;
+    }
+
+    .gray_img{
+        width: 50px;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%,-50%);
+    }
+    .yellow{
+        background: #e1ad01;
+    }
+
+    ion-input, ion-datetime{
+        border: 1px solid lightgray;
+        border-radius: 5px;
+        --padding-start : 8px;
+        margin-top: 15px
+    }
+
+    .left_col{
+        padding-left: 0px;
+    }
+    .right_col{
+        padding-right: 0px;
+    }
+
+    ion-button {
+        --background: #e1ad01;
+        --border-radius: 5px;
+        color: white;
+        font-weight: 600;
+        margin-top: 30px;
+    }
+}

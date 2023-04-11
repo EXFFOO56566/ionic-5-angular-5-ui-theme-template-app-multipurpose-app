@@ -1,0 +1,52 @@
+<ion-header>
+  <ion-toolbar color="secondary">
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>Ck Editor</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-row>
+    <ion-col size="3">
+      <div class="center">
+        <div class="seperator"></div>
+      </div>
+    </ion-col>
+    <ion-col>
+      <p class="title">CK Editor</p>
+    </ion-col>
+    <ion-col size="3">
+      <div class="center">
+        <div class="seperator"></div>
+      </div>
+    </ion-col>
+  </ion-row>
+
+  <div>
+    <ckeditor [(ngModel)]="ckeditorContent"
+      [config]="{uiColor: '#0cd1e8',removeButtons:'Source,Copy,Cut,Paste,Undo,Redo,Print,Form,TextField,Textarea,Button,SelectAll,NumberedList,BulletedList,CreateDiv,Table,PasteText,PasteFromWord,Select,HiddenField',removePlugins:'elementspath,save,image,flash,iframe,link,smiley,find,pagebreak,templates,about,maximize,showblocks,newpage,language'}"
+      [readonly]="false" (change)="onChange($event)" debounce="500">
+    </ckeditor>
+  </div>
+
+  <ion-row>
+    <ion-col size="3">
+      <div class="center">
+        <div class="seperator"></div>
+      </div>
+    </ion-col>
+    <ion-col>
+      <p class="title">Output</p>
+    </ion-col>
+    <ion-col size="3">
+      <div class="center">
+        <div class="seperator"></div>
+      </div>
+    </ion-col>
+  </ion-row>
+  <div class="output">
+    <div>{{ckeditorContent}}</div>
+  </div>
+</ion-content>

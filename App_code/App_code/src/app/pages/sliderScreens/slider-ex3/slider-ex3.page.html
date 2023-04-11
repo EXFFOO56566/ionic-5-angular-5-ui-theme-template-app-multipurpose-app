@@ -1,0 +1,28 @@
+<ion-content>
+  <div class="main_content_div">
+    <ion-icon name="arrow-back-outline" [class.ios_pad]="plt == 'ios'" (click)="goBack()"></ion-icon>
+    <ion-slides pager="true">
+      <ion-slide>
+        <div class="slide_div slide_1">
+            <img src="assets/imgs/slider/slider1.png" class="slide_img">
+            <ion-label class="head_lbl">Request Ride</ion-label>
+            <ion-label class="small_lbl">Request a ride get picked up by a <br> near by community driver</ion-label>
+        </div>
+      </ion-slide>
+      <ion-slide>
+        <div class="slide_div slide_2">
+          <img src="assets/imgs/slider/slider2.png" class="slide_img">
+          <ion-label class="head_lbl">Confirm Your Driver</ion-label>
+          <ion-label class="small_lbl">Huge drivers network helps you find <br>Comfortable, cheap and safe ride </ion-label>
+      </div>
+      </ion-slide>
+      <ion-slide>
+        <div class="slide_div slide_3">
+          <img src="assets/imgs/slider/slider3.png" class="slide_img">
+          <ion-label class="head_lbl">Track Your Ride</ion-label>
+          <ion-label class="small_lbl">Know your driver im advance and be able<br> to view current location in real time<br> on the map</ion-label>
+      </div>
+      </ion-slide>
+    </ion-slides>
+  </div>
+</ion-content>

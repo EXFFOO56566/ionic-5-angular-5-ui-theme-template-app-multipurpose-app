@@ -1,0 +1,51 @@
+<ion-header>
+  <ion-toolbar color="secondary">
+    <ion-buttons slot="start">
+      <ion-back-button mode="md"></ion-back-button>
+    </ion-buttons>
+    <ion-title>E-commerce Example 3</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="main_content_div">
+
+    <img src="assets/imgs/products/bag.jpg">
+
+    <ion-label class="name">Brown Lady Handbag <span>$200.00</span></ion-label>
+    <ion-label class="desc">Small bag for travelling</ion-label>
+
+
+    <div class="desc_card">
+      <ion-label class="small_header">Description</ion-label>
+      <ion-label class="pro_desc">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum
+        has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type
+        and scrambled</ion-label>
+    </div>
+
+    <div class="flex_div">
+      <div class="round_div" (click)="onClick(1)" [class.active]="id == 1">
+        <ion-label>32</ion-label>
+      </div>
+      <div class="round_div" (click)="onClick(2)" [class.active]="id == 2">
+        <ion-label>33</ion-label>
+      </div>
+      <div class="round_div" (click)="onClick(3)" [class.active]="id == 3">
+        <ion-label>34</ion-label>
+      </div>
+      <div class="round_div" (click)="onClick(4)" [class.active]="id == 4">
+        <ion-label>35</ion-label>
+      </div>
+    </div>
+
+    <ion-range dualKnobs="true" min="21" max="72" step="3" snaps="true">
+      <ion-label slot="start">100</ion-label>
+      <ion-label slot="end">500</ion-label>
+    </ion-range>
+
+    <ion-button expand="block">
+      ADD TO CART
+    </ion-button>
+
+  </div>
+</ion-content>
